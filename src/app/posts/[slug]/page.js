@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import { posts } from '@/data/posts'
+import ScrollToTop from '@/components/ScrollToTop'
 
 export async function generateMetadata({ params }) {
   const { slug } = await params
@@ -115,6 +116,8 @@ export default async function PostPage({ params }) {
           </article>
         </div>
       </main>
+
+              <ScrollToTop />
 
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-3xl flex-col items-center justify-between gap-3 px-5 py-8 text-sm text-muted-foreground sm:flex-row sm:px-6">
