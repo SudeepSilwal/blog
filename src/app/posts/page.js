@@ -1,149 +1,90 @@
-import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import { posts } from '@/data/posts'
 
-export async function generateMetadata({ params }) {
-  const { slug } = await params
-
-  const post = posts.find((post) => post.slug === slug)
-
-  if (!post) {
-    return {
-      title: 'Post Not Found',
-    }
-  }
-
-  return {
-    title: post.title,
-    description: post.excerpt,
-  }
+export const metadata = {
+  title: 'All Posts',
+  description: 'Explore all articles and blog posts.',
 }
 
-export default async function PostPage({ params }) {
-  const { slug } = await params
-
-  const post = posts.find((post) => post.slug === slug)
-
-  if (!post) {
-    notFound()
-  }
-
+export default function PostsPage() {
   return (
     <>
       <Header />
 
-      <main className="mx-auto max-w-4xl px-6 pb-24 pt-16">
-        {/* Back button */}
-
+      <main className="mx-auto min-h-screen max-w-5xl px-5 pb-24 pt-16 sm:px-6">
         <Link
-          href="/posts"
+          href="/"
           className="text-sm text-muted-foreground transition-colors hover:text-foreground"
         >
-          ← Back to posts
+          ← Back to home
         </Link>
 
-        <article className="mt-10">
-          {/* Category, date, reading time */}
+        <section className="mt-10">
+          <p className="text-sm font-medium text-muted-foreground">
+            Blog
+          </p>
 
-          <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-            <span>{post.category}</span>
-
-            <span>•</span>
-
-            <time>{post.date}</time>
-
-            <span>•</span>
-
-            <span>{post.readingTime}</span>
-          </div>
-
-          {/* Blog title */}
-
-          <h1 className="mt-5 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-            {post.title}
+          <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
+            All Posts
           </h1>
 
-          {/* Excerpt */}
-
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">
-            {post.excerpt}
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">
+            Explore articles about health, technology, web development,
+            projects, and other interesting topics.
           </p>
+        </section>
 
-          {/* Featured image */}
+        <section className="mt-14 grid gap-6 border-t border-border pt-10 md:grid-cols-2">
+          {posts.map((post) => (
+            <Link
+              key={post.id}
+              href={`/posts/${post.slug}`}
+              className="group overflow-hidden rounded-2xl border border-border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+            >
+              {post.image && (
+                <div className="aspect-video w-full overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              )}
 
-          {post.image && (
-            <div className="mt-10 flex justify-center">
-              <img
-                src={post.image}
-                alt={post.imageAlt || post.title}
-                className="w-full max-w-2xl rounded-xl border border-border object-contain"
-              />
-            </div>
-          )}
+              <div className="p-6">
+                <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+                  <span>{post.category}</span>
 
-          {/* YouTube video */}
+                  <span>•</span>
 
-          {post.youtubeId && (
-            <div className="mx-auto mt-10 w-full max-w-2xl">
-              <div className="overflow-hidden rounded-xl border border-border">
-                <iframe
-                  className="block aspect-video w-full"
-                  src={`https://www.youtube.com/embed/${post.youtubeId}`}
-                  title={post.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+                  <time>{post.date}</time>
+
+                  <span>•</span>
+
+                  <span>{post.readingTime}</span>
+                </div>
+
+                <h2 className="mt-4 text-2xl font-bold tracking-tight">
+                  {post.title}
+                </h2>
+
+                <p className="mt-3 leading-7 text-muted-foreground">
+                  {post.excerpt}
+                </p>
+
+                <div className="mt-6 text-sm font-semibold transition-transform duration-300 group-hover:translate-x-1">
+                  Read article →
+                </div>
               </div>
-            </div>
-          )}
-
-          {/* Blog content */}
-
-          <div
-            className="prose mt-12 max-w-none"
-            dangerouslySetInnerHTML={{
-              __html: post.content,
-            }}
-          />
-
-          {/* Tags */}
-
-          {post.tags && post.tags.length > 0 && (
-            <div className="mt-16 border-t border-border pt-8">
-              <h3 className="text-sm font-semibold text-muted-foreground">
-                Tags
-              </h3>
-
-              <div className="mt-4 flex flex-wrap gap-2">
-                {post.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full border border-border px-3 py-1 text-sm text-muted-foreground"
-                  >
-                    #{tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
-        </article>
+            </Link>
+          ))}
+        </section>
       </main>
 
-      {/* Footer */}
-
       <footer className="border-t border-border">
-        <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-3 px-6 py-8 text-sm text-muted-foreground sm:flex-row">
-          <p>
-            © {new Date().getFullYear()} Sudeep Silwal. All rights reserved.
-          </p>
-
-          <Link
-            href="/"
-            className="transition-colors hover:text-foreground"
-          >
-            Back to home
-          </Link>
+        <div className="mx-auto max-w-5xl px-5 py-8 text-center text-sm text-muted-foreground sm:px-6">
+          © {new Date().getFullYear()} Sudeep Silwal. All rights reserved.
         </div>
       </footer>
     </>
