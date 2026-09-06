@@ -9,7 +9,7 @@ export const posts = [
       'what-happens-if-you-drink-lemon-water-every-day-for-30-days',
 
     excerpt:
-      'What really happens if you drink lemon water every day for 30 days? Learn about hydration, weight loss myths, vitamin C, possible side effects, and what you can realistically expect.',
+      'What really happens if you drink lemon water every day for 30 days? Learn about hydration, weight loss myths, vitamin C, honey, sugar, garlic, mint, possible side effects, and what you can realistically expect.',
 
     content: `
       <p>
@@ -30,6 +30,12 @@ export const posts = [
       </p>
 
       <p>
+        Some people also add ingredients such as honey, a small amount of
+        sugar, garlic, or mint to change the flavor or potentially add other
+        nutritional benefits.
+      </p>
+
+      <p>
         The realistic answer is less dramatic than many social media claims.
         Lemon water can be a healthy addition to your routine, especially
         when it helps you drink more water or replace sugary beverages.
@@ -47,7 +53,14 @@ export const posts = [
 
       <p>
         You can make it as strong or mild as you like. A small squeeze of
-        fresh lemon can add flavor without adding much sugar or many calories.
+        fresh lemon can add flavor without adding many calories.
+      </p>
+
+      <p>
+        You can also experiment with ingredients such as mint or a small
+        amount of honey if they make the drink more enjoyable. However,
+        adding sugar or large amounts of honey will increase the calorie
+        and sugar content.
       </p>
 
       <h2>What May Happen During the First Week?</h2>
@@ -139,6 +152,118 @@ export const posts = [
         surrounding the habit.
       </p>
 
+      <h2>Adding Honey to Lemon Water</h2>
+
+      <p>
+        Honey is commonly added to lemon water to reduce the sour taste and
+        make the drink more enjoyable.
+      </p>
+
+      <p>
+        A small amount of honey can provide sweetness, but honey is still a
+        source of sugar and calories. Adding large amounts can reduce the
+        advantage of using lemon water as a low-calorie alternative to
+        sweetened drinks.
+      </p>
+
+      <ul class="check-list">
+        <li>Can improve the flavor of lemon water</li>
+        <li>May make it easier to replace sugary soft drinks</li>
+        <li>Contains natural sugars and calories</li>
+        <li>Large amounts can increase total sugar intake</li>
+      </ul>
+
+      <div class="article-highlight">
+        A small amount of honey may be useful for flavor, but more honey does
+        not necessarily mean more health benefits.
+      </div>
+
+      <h2>What About Adding a Little Sugar?</h2>
+
+      <p>
+        Adding a small amount of sugar can make lemon water taste more like
+        lemonade. However, sugar does not add any special health benefit to
+        the drink.
+      </p>
+
+      <p>
+        If your goal is to replace soda or reduce calorie intake, it is usually
+        better to use little or no added sugar.
+      </p>
+
+      <ul class="arrow-list">
+        <li>A small amount can improve flavor</li>
+        <li>Too much can significantly increase calorie intake</li>
+        <li>It may turn a healthy drink into a sugary beverage</li>
+        <li>Using less sugar can help maintain the low-calorie benefit</li>
+      </ul>
+
+      <h2>Can You Add Mint?</h2>
+
+      <p>
+        Fresh mint can add a refreshing flavor and aroma to lemon water.
+        Many people enjoy lemon and mint together, especially in cold water
+        during warm weather.
+      </p>
+
+      <p>
+        Mint does not magically detox the body or burn fat, but it can make
+        the drink more enjoyable and may encourage you to drink more water.
+      </p>
+
+      <ul class="check-list">
+        <li>Adds a fresh and refreshing flavor</li>
+        <li>May make drinking water more enjoyable</li>
+        <li>Contains small amounts of beneficial plant compounds</li>
+        <li>Does not directly cause weight loss</li>
+      </ul>
+
+      <h2>What Happens If You Add Garlic?</h2>
+
+      <p>
+        Garlic is sometimes added to homemade health drinks because it
+        contains natural compounds that have been studied for possible health
+        benefits.
+      </p>
+
+      <p>
+        However, garlic has a very strong taste and may not work well in
+        ordinary lemon water. Some people may also experience stomach
+        discomfort, heartburn, or irritation after consuming raw garlic.
+      </p>
+
+      <ul class="warning-list">
+        <li>Garlic can have a strong taste and smell</li>
+        <li>Raw garlic may cause stomach discomfort for some people</li>
+        <li>It may worsen heartburn or acid reflux in sensitive individuals</li>
+        <li>More garlic does not automatically mean greater health benefits</li>
+      </ul>
+
+      <div class="article-info">
+        If you enjoy garlic, it may be better included as part of a balanced
+        diet rather than adding large amounts to lemon water every day.
+      </div>
+
+      <h2>A Simple Lemon Water Combination</h2>
+
+      <p>
+        If you want to experiment with flavor, you can keep the drink simple
+        and avoid adding too much sugar.
+      </p>
+
+      <ul class="check-list">
+        <li>Water</li>
+        <li>A squeeze of fresh lemon</li>
+        <li>A few fresh mint leaves</li>
+        <li>A small amount of honey if desired</li>
+        <li>Ice for a refreshing cold drink</li>
+      </ul>
+
+      <p>
+        Garlic can be used separately in meals if you prefer its nutritional
+        benefits without changing the flavor of your lemon water.
+      </p>
+
       <h2>What Lemon Water Will Not Do</h2>
 
       <p>
@@ -178,12 +303,12 @@ export const posts = [
 
       <p>
         Some people may find that acidic drinks trigger or worsen heartburn.
-        If lemon water consistently causes discomfort, reducing the amount of
-        lemon or avoiding the drink may be a better option.
+        Garlic or mint may also cause digestive discomfort for some individuals.
       </p>
 
       <ul class="warning-list">
         <li>Lemon water may trigger heartburn for some people</li>
+        <li>Garlic may cause stomach irritation in some individuals</li>
         <li>Reduce or stop drinking it if it consistently causes discomfort</li>
       </ul>
 
@@ -203,6 +328,9 @@ export const posts = [
       <ul class="info-list">
         <li>The habit may help you drink more water</li>
         <li>You may replace some sugary drinks</li>
+        <li>Mint or lemon may make water more enjoyable</li>
+        <li>Honey and sugar can increase calorie intake</li>
+        <li>Garlic may not be suitable for everyone</li>
         <li>You may become more aware of your daily choices</li>
       </ul>
 
@@ -220,6 +348,13 @@ export const posts = [
       </p>
 
       <p>
+        Adding ingredients such as mint can improve the flavor, while a small
+        amount of honey or sugar can make the drink sweeter. Garlic may offer
+        nutritional value as part of your diet, but it may not be enjoyable
+        or suitable for everyone when mixed into lemon water.
+      </p>
+
+      <p>
         The biggest benefits are likely to come from the overall lifestyle
         habits surrounding the drink rather than from lemon water acting as a
         miracle solution.
@@ -231,6 +366,7 @@ export const posts = [
         <li>Include regular physical activity</li>
         <li>Get quality sleep</li>
         <li>Build sustainable habits</li>
+        <li>Use honey and sugar in moderation</li>
       </ul>
     `,
 
@@ -242,11 +378,15 @@ export const posts = [
       'Wellness',
       'Hydration',
       'Weight Loss',
+      'Honey',
+      'Mint',
+      'Garlic',
+      'Healthy Drinks',
     ],
 
     date: '2026-09-06',
 
-    readingTime: '8 min read',
+    readingTime: '7 min read',
 
     image:
       'https://res.cloudinary.com/dqfqxlysk/image/upload/v1788684707/LemonWater.png',
