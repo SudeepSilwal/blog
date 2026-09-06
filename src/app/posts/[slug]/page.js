@@ -81,11 +81,6 @@ export default async function PostPage({ params }) {
         </div>
 
         {/* Advertisement */}
-        <div className="mx-auto my-12 max-w-5xl">
-          <div className="flex min-h-28 items-center justify-center rounded-xl border border-dashed border-border text-xs text-muted-foreground">
-            Advertisement
-          </div>
-        </div>
 
         {/* Article Content */}
         <article
@@ -122,6 +117,7 @@ export default async function PostPage({ params }) {
         )}
 
       </main>
+          <Footer />
     </>
   )
 }
