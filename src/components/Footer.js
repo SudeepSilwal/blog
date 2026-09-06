@@ -10,6 +10,7 @@ export default function Footer() {
         </p>
 
         <div className="flex items-center gap-5">
+
           <a
             href="https://sudeepsilwal.com.np"
             target="_blank"
@@ -25,8 +26,8 @@ export default function Footer() {
           >
             Blog
           </a>
-        </div>
 
+        </div>
       </div>
     </footer>
   )
