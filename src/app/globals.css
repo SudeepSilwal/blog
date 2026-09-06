@@ -120,6 +120,19 @@ img {
   font-weight: 700;
 }
 
+.prose img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+
+  margin: 2.5rem 0;
+
+  border-radius: 1rem;
+
+  border: 1px solid var(--border);
+}
+
 /* Article hero image */
 
 .post-hero-image {
