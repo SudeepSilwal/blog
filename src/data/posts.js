@@ -450,7 +450,7 @@ export const posts = [
     imageAlt:
       'A glass of fresh lemon water with sliced lemons',
 
-    youtubeId: 'YOUR_YOUTUBE_VIDEO_ID',
+    youtubeId: 'mSeOdnrg1rI',
 
     featured: true,
   },
