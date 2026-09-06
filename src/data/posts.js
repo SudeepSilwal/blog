@@ -445,7 +445,7 @@ export const posts = [
 
     readingTime: '8 min read',
 
-    image: '/images/posts/lemon-water-30-days.jpg',
+    image: 'https://res.cloudinary.com/dqfqxlysk/image/upload/v1788684707/LemonWater.png',
 
     imageAlt:
       'A glass of fresh lemon water with sliced lemons',
