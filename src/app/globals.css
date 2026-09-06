@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* =========================
+   LIGHT THEME
+========================= */
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -8,6 +12,10 @@
   --card: #ffffff;
 }
 
+/* =========================
+   DARK THEME
+========================= */
+
 .dark {
   --background: #09090b;
   --foreground: #f4f4f5;
@@ -15,6 +23,10 @@
   --border: #27272a;
   --card: #18181b;
 }
+
+/* =========================
+   TAILWIND THEME
+========================= */
 
 @theme inline {
   --color-background: var(--background);
@@ -27,9 +39,380 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  transition: background 0.25s ease, color 0.25s ease;
+  font-family:
+    var(--font-geist-sans),
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================
+   ARTICLE TYPOGRAPHY
+========================= */
+
+.prose {
+  color: var(--foreground);
+}
+
+.prose p {
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+
+  font-size: 1.1rem;
+  line-height: 1.9;
+
+  color: var(--foreground);
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  color: var(--foreground);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.prose h1 {
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+
+  font-size: 2.5rem;
+  line-height: 1.15;
+}
+
+.prose h2 {
+  margin-top: 4rem;
+  margin-bottom: 1.25rem;
+
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.prose h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+
+  font-size: 1.45rem;
+  line-height: 1.3;
+}
+
+.prose h4 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+
+  font-size: 1.2rem;
+}
+
+/* =========================
+   NORMAL LISTS
+========================= */
+
+.prose ul,
+.prose ol {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin: 0.75rem 0;
+  padding-left: 0.25rem;
+
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* =========================
+   BLOCKQUOTE
+========================= */
+
+.prose blockquote {
+  margin: 2.5rem 0;
+  padding: 1.25rem 1.5rem;
+
+  border-left: 4px solid var(--foreground);
+  border-radius: 0.75rem;
+
+  background: var(--card);
+
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.prose blockquote p {
+  margin: 0;
+}
+
+/* =========================
+   TEXT ELEMENTS
+========================= */
+
+.prose strong {
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+.prose a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* =========================
+   ARTICLE IMAGES
+   Keeps original aspect ratio
+========================= */
+
+.prose img {
+  display: block;
+
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+
+  margin: 2.5rem auto;
+
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+}
+
+/* =========================
+   CHECK POINTS ✓
+========================= */
+
+.article-check {
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+
+  border-left: 3px solid var(--foreground);
+  border-radius: 0.5rem;
+
+  background: var(--card);
+
+  line-height: 1.7;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.article-check:hover {
+  transform: translateX(4px);
+}
+
+/* =========================
+   ARROW POINTS →
+========================= */
+
+.article-arrow {
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+
+  border-left: 3px solid var(--border);
+  border-radius: 0.5rem;
+
+  background: var(--card);
+
+  line-height: 1.7;
+
+  transition: transform 0.2s ease;
+}
+
+.article-arrow:hover {
+  transform: translateX(4px);
+}
+
+/* =========================
+   HIGHLIGHT BOX ✦
+========================= */
+
+.article-highlight {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+
+  background: var(--card);
+
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+/* =========================
+   WARNING BOX ⚠
+========================= */
+
+.article-warning {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+
+  background: var(--card);
+
+  line-height: 1.7;
+}
+
+/* =========================
+   INFORMATION BOX ℹ
+========================= */
+
+.article-info {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+
+  background: var(--card);
+
+  line-height: 1.7;
+}
+
+/* =========================
+   SEPARATOR
+========================= */
+
+.prose hr {
+  margin: 3rem 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+/* =========================
+   CODE
+========================= */
+
+.prose code {
+  padding: 0.2rem 0.4rem;
+
+  border-radius: 0.35rem;
+
+  background: var(--card);
+
+  font-size: 0.9em;
+}
+
+.prose pre {
+  margin: 2rem 0;
+  padding: 1.25rem;
+
+  overflow-x: auto;
+
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+
+  background: var(--card);
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.prose table {
+  width: 100%;
+  margin: 2rem 0;
+
+  border-collapse: collapse;
+}
+
+.prose th,
+.prose td {
+  padding: 0.9rem;
+
+  border: 1px solid var(--border);
+
+  text-align: left;
+}
+
+.prose th {
+  background: var(--card);
+  font-weight: 700;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 640px) {
+  .prose p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .prose h1 {
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
+
+  .prose h2 {
+    margin-top: 3rem;
+    font-size: 1.7rem;
+  }
+
+  .prose h3 {
+    font-size: 1.3rem;
+  }
+
+  .prose li {
+    font-size: 1rem;
+  }
+
+  .prose img {
+    width: 100%;
+    margin: 2rem auto;
+    border-radius: 0.75rem;
+  }
+
+  .article-check,
+  .article-arrow,
+  .article-highlight,
+  .article-warning,
+  .article-info {
+    padding: 1rem;
+  }
+}
+
+/* =========================
+   TEXT SELECTION
+========================= */
+
+::selection {
+  background: var(--foreground);
+  color: var(--background);
 }
