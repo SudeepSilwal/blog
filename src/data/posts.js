@@ -63,7 +63,7 @@ export const posts = [
         consistently.
       </p>
 
-      <ul>
+      <ul class="check-list">
         <li>Better hydration habits</li>
         <li>Less consumption of sugary drinks</li>
         <li>A refreshing alternative to soda</li>
@@ -113,7 +113,7 @@ export const posts = [
         unsweetened lemon water can reduce the number of calories you consume.
       </p>
 
-      <ul>
+      <ul class="arrow-list">
         <li>It does not magically burn fat</li>
         <li>It does not specifically target belly fat</li>
         <li>It may help reduce calorie intake when replacing sugary drinks</li>
@@ -146,7 +146,7 @@ export const posts = [
         miraculous functions inside your body.
       </p>
 
-      <ul>
+      <ul class="arrow-list">
         <li>It will not automatically melt belly fat</li>
         <li>It will not magically detox your body</li>
         <li>It will not cure diseases</li>
@@ -169,11 +169,10 @@ export const posts = [
         to tooth enamel erosion over time.
       </p>
 
-      <p>
-        To reduce prolonged acid exposure, avoid constantly sipping lemon
-        water throughout the entire day and consider drinking plain water
-        afterward.
-      </p>
+      <ul class="warning-list">
+        <li>Avoid constantly sipping acidic lemon water all day</li>
+        <li>Drink plain water afterward when possible</li>
+      </ul>
 
       <h3>Heartburn or Acid Reflux</h3>
 
@@ -182,6 +181,11 @@ export const posts = [
         If lemon water consistently causes discomfort, reducing the amount of
         lemon or avoiding the drink may be a better option.
       </p>
+
+      <ul class="warning-list">
+        <li>Lemon water may trigger heartburn for some people</li>
+        <li>Reduce or stop drinking it if it consistently causes discomfort</li>
+      </ul>
 
       <h2>What Is the Most Realistic Result After 30 Days?</h2>
 
@@ -196,10 +200,11 @@ export const posts = [
         daily choices.
       </p>
 
-      <p>
-        For many people, these indirect benefits are more realistic and useful
-        than expecting lemon water to create dramatic results by itself.
-      </p>
+      <ul class="info-list">
+        <li>The habit may help you drink more water</li>
+        <li>You may replace some sugary drinks</li>
+        <li>You may become more aware of your daily choices</li>
+      </ul>
 
       <h2>Final Thoughts</h2>
 
@@ -220,11 +225,13 @@ export const posts = [
         miracle solution.
       </p>
 
-      <p>
-        For the best results, focus on consistent hydration, a balanced diet,
-        regular physical activity, quality sleep, and sustainable habits that
-        work for your lifestyle.
-      </p>
+      <ul class="check-list">
+        <li>Stay consistently hydrated</li>
+        <li>Focus on a balanced diet</li>
+        <li>Include regular physical activity</li>
+        <li>Get quality sleep</li>
+        <li>Build sustainable habits</li>
+      </ul>
     `,
 
     category: 'Health & Wellness',
