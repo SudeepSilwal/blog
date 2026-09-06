@@ -84,13 +84,32 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+
+  name: 'Sudeep Silwal',
+
+  url: 'https://sudeepsilwal.com.np',
+
+  sameAs: [
+    'https://www.instagram.com/thesudeepsilwal/',
+  ],
+}
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background text-foreground`}
-      >
-        {children}
-      </body>
+  className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background text-foreground`}
+>
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(personSchema),
+    }}
+  />
+
+  {children}
+</body>
     </html>
   )
 }

@@ -69,48 +69,81 @@ export default async function PostPage({ params }) {
     )
     .slice(0, 3)
 
-    const articleSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
 
-  headline: post.title,
+    headline: post.title,
 
-  description: post.excerpt,
+    description: post.excerpt,
 
-  image: post.image,
+    image: post.image,
 
-  datePublished: post.date,
+    datePublished: post.date,
 
-  dateModified: post.modifiedDate || post.date,
+    dateModified: post.modifiedDate || post.date,
 
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': `https://blog.sudeepsilwal.com.np/posts/${post.slug}`,
-  },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://blog.sudeepsilwal.com.np/posts/${post.slug}`,
+    },
 
-  author: {
-    '@type': 'Person',
-    name: 'Sudeep Silwal',
-    url: 'https://sudeepsilwal.com.np',
-  },
+    author: {
+      '@type': 'Person',
+      name: 'Sudeep Silwal',
+      url: 'https://sudeepsilwal.com.np',
+    },
 
-  publisher: {
-    '@type': 'Person',
-    name: 'Sudeep Silwal',
-    url: 'https://sudeepsilwal.com.np',
-  },
-}
+    publisher: {
+      '@type': 'Person',
+      name: 'Sudeep Silwal',
+      url: 'https://sudeepsilwal.com.np',
+    },
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://blog.sudeepsilwal.com.np',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Posts',
+        item: 'https://blog.sudeepsilwal.com.np/posts',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: post.title,
+        item: `https://blog.sudeepsilwal.com.np/posts/${post.slug}`,
+      },
+    ],
+  }
 
   return (
     <>
       <Header />
 
       <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify(articleSchema),
-  }}
-/>
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleSchema),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
 
       <main className="min-h-screen px-5 pb-24 pt-16 sm:px-6">
         <div className="mx-auto max-w-3xl">
