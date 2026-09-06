@@ -1,138 +1,59 @@
-import { notFound } from 'next/navigation'
-import Link from 'next/link'
-import Header from '@/components/Header'
-import { posts } from '@/data/posts'
-import ScrollToTop from '@/components/ScrollToTop'
+{relatedPosts.length > 0 && (
+  <section className="mt-16 border-t border-border pt-10">
+    <div className="flex items-center justify-between">
+      <div>
+        <p className="text-sm text-muted-foreground">
+          Keep reading
+        </p>
 
-export async function generateMetadata({ params }) {
-  const { slug } = await params
+        <h2 className="mt-2 text-2xl font-bold tracking-tight">
+          Similar Posts
+        </h2>
+      </div>
 
-  const post = posts.find((post) => post.slug === slug)
+      <Link
+        href="/posts"
+        className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+      >
+        View all →
+      </Link>
+    </div>
 
-  if (!post) {
-    return {
-      title: 'Post Not Found',
-    }
-  }
+    <div className="mt-8 grid gap-6 md:grid-cols-2">
+      {relatedPosts.map((relatedPost) => (
+        <Link
+          key={relatedPost.id}
+          href={`/posts/${relatedPost.slug}`}
+          className="group overflow-hidden rounded-xl border border-border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          {relatedPost.image && (
+            <div className="aspect-video overflow-hidden">
+              <img
+                src={relatedPost.image}
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+          )}
 
-  return {
-    title: post.title,
-    description: post.excerpt,
-  }
-}
-
-export default async function PostPage({ params }) {
-  const { slug } = await params
-
-  const post = posts.find((post) => post.slug === slug)
-
-  if (!post) {
-    notFound()
-  }
-
-  return (
-    <>
-      <Header />
-
-      <main className="min-h-screen px-5 pb-24 pt-16 sm:px-6">
-        <div className="mx-auto max-w-3xl">
-
-          <Link
-            href="/posts"
-            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-          >
-            ← Back to posts
-          </Link>
-
-          <article className="mt-10">
-
-            <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-              <span>{post.category}</span>
-              <span>•</span>
-              <time>{post.date}</time>
-              <span>•</span>
-              <span>{post.readingTime}</span>
+          <div className="p-5">
+            <div className="text-sm text-muted-foreground">
+              {relatedPost.category} • {relatedPost.readingTime}
             </div>
 
-            <h1 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">
-              {post.title}
-            </h1>
+            <h3 className="mt-3 text-xl font-bold tracking-tight">
+              {relatedPost.title}
+            </h3>
 
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              {post.excerpt}
+            <p className="mt-3 line-clamp-2 text-sm leading-6 text-muted-foreground">
+              {relatedPost.excerpt}
             </p>
 
-            {/* HERO IMAGE */}
-            {post.image && (
-              <div className="mt-10 w-full">
-                <img
-                  src={post.image}
-                  className="h-auto w-full rounded-xl border border-border"
-                />
-              </div>
-            )}
-
-            {/* FULL BLOG CONTENT */}
-            <div
-              className="prose mt-12 max-w-none"
-              dangerouslySetInnerHTML={{
-                __html: post.content,
-              }}
-            />
-
-            {/* YOUTUBE VIDEO - LAST */}
-            {post.youtubeId && (
-              <div className="mt-12 w-full overflow-hidden rounded-xl border border-border">
-                <iframe
-                  className="aspect-video w-full"
-                  src={`https://www.youtube.com/embed/${post.youtubeId}`}
-                  title={post.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-            )}
-
-            {/* TAGS */}
-            {post.tags && post.tags.length > 0 && (
-              <div className="mt-16 border-t border-border pt-8">
-                <h3 className="text-sm font-semibold text-muted-foreground">
-                  Tags
-                </h3>
-
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {post.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full border border-border px-3 py-1 text-sm text-muted-foreground"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-
-          </article>
-        </div>
-      </main>
-
-              <ScrollToTop />
-
-      <footer className="border-t border-border">
-        <div className="mx-auto flex max-w-3xl flex-col items-center justify-between gap-3 px-5 py-8 text-sm text-muted-foreground sm:flex-row sm:px-6">
-          <p>
-            © {new Date().getFullYear()} Sudeep Silwal. All rights reserved.
-          </p>
-
-          <Link
-            href="/"
-            className="transition-colors hover:text-foreground"
-          >
-            Back to home ↑
-          </Link>
-        </div>
-      </footer>
-    </>
-  )
-}
+            <div className="mt-5 text-sm font-semibold transition-transform duration-300 group-hover:translate-x-1">
+              Read article →
+            </div>
+          </div>
+        </Link>
+      ))}
+    </div>
+  </section>
+)}
