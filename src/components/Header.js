@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import ThemeToggle from '@/components/ThemeToggle'
 
 export default function Header() {
   return (
@@ -9,21 +10,22 @@ export default function Header() {
           href="/"
           className="text-xl font-bold tracking-tight transition-opacity hover:opacity-70 sm:text-2xl"
         >
-          Sudeep<span className="text-muted-foreground">.</span>
+          Sudeep
+          <span className="text-muted-foreground">.</span>
         </Link>
 
-        <div className="flex items-center gap-4 text-sm sm:gap-7">
+        <div className="flex items-center gap-4">
 
           <Link
             href="/"
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             Home
           </Link>
 
           <Link
             href="/posts"
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             Posts
           </Link>
@@ -32,10 +34,12 @@ export default function Header() {
             href="https://sudeepsilwal.com.np"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-border px-3 py-1.5 text-muted-foreground transition-all hover:border-foreground hover:text-foreground sm:px-4"
+            className="hidden rounded-full border border-border px-4 py-1.5 text-sm text-muted-foreground transition-all hover:border-foreground hover:text-foreground sm:block"
           >
-            Portfolio <span className="hidden sm:inline">↗</span>
+            Portfolio ↗
           </a>
+
+          <ThemeToggle />
 
         </div>
 
