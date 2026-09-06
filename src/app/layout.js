@@ -93,7 +93,10 @@ export default function RootLayout({ children }) {
   url: 'https://sudeepsilwal.com.np',
 
   sameAs: [
-    'https://www.instagram.com/thesudeepsilwal/',
+    'https://www.linkedin.com/in/sudeepsilwal',
+    'https://x.com/thesudeepsilwal',
+    'https://github.com/SudeepSilwal',
+    'https://www.youtube.com/@thesudeepsilwal',
   ],
 }
   return (
