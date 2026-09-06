@@ -69,14 +69,14 @@ export default async function PostPage({ params }) {
 
             {/* Hero Image */}
             {post.image && (
-              <div className="mt-10 overflow-hidden rounded-2xl border border-border">
-                <img
-                  src={post.image}
-                  alt={post.imageAlt || post.title}
-                  className="h-auto w-full object-cover"
-                />
-              </div>
-            )}
+  <div className="mt-8 overflow-hidden rounded-2xl border border-border">
+    <img
+      src={post.image}
+      alt={post.imageAlt || post.title}
+      className="h-[220px] w-full object-cover sm:h-[300px] lg:h-[350px]"
+    />
+  </div>
+)}
 
           </article>
         </div>
