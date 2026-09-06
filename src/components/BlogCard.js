@@ -4,9 +4,11 @@ export default function BlogCard({ post }) {
   return (
     <Link
       href={`/posts/${post.slug}`}
-      className="group relative block overflow-hidden rounded-2xl border border-border bg-card"
+      className="group relative block min-h-[280px] overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1"
     >
-      {/* Background Image */}
+
+      {/* FADED BACKGROUND IMAGE */}
+
       {post.image && (
         <img
           src={post.image}
@@ -15,16 +17,22 @@ export default function BlogCard({ post }) {
         />
       )}
 
-      {/* Dark / light overlay */}
+      {/* OVERLAY */}
+
       <div className="absolute inset-0 bg-background/75" />
 
-      {/* Content */}
-      <div className="relative z-10 p-6 sm:p-8">
+      {/* CONTENT */}
+
+      <div className="relative z-10 flex h-full flex-col p-6 sm:p-8">
 
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
+
           <span>{post.category}</span>
+
           <span>•</span>
+
           <span>{post.readingTime}</span>
+
         </div>
 
         <h2 className="mt-4 text-2xl font-bold tracking-tight sm:text-3xl">
@@ -35,7 +43,7 @@ export default function BlogCard({ post }) {
           {post.excerpt}
         </p>
 
-        <div className="mt-6 text-sm font-medium transition-transform group-hover:translate-x-1">
+        <div className="mt-auto pt-6 text-sm font-medium transition-transform group-hover:translate-x-1">
           Read article →
         </div>
 
