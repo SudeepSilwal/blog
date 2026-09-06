@@ -13,6 +13,7 @@ export default function Header() {
         </Link>
 
         <div className="flex items-center gap-4 text-sm sm:gap-7">
+
           <Link
             href="/"
             className="text-muted-foreground transition-colors hover:text-foreground"
@@ -35,6 +36,7 @@ export default function Header() {
           >
             Portfolio <span className="hidden sm:inline">↗</span>
           </a>
+
         </div>
 
       </nav>
