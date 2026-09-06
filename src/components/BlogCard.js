@@ -13,7 +13,7 @@ export default function BlogCard({ post }) {
         <img
           src={post.image}
           alt=""
-          className="absolute inset-0 h-full w-full object-cover opacity-20 transition duration-500 group-hover:scale-105 group-hover:opacity-30"
+          className="absolute inset-0 h-full w-full object-cover opacity-30 transition duration-500 group-hover:scale-105 group-hover:opacity-50"
         />
       )}
 
