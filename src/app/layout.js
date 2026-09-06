@@ -1,21 +1,95 @@
+import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
-import { Analytics } from '@vercel/analytics/next'
+
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+})
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+})
 
 export const metadata = {
+  metadataBase: new URL('https://blog.sudeepsilwal.com.np'),
+
   title: {
-    default: 'Sudeep Silwal | Blog',
-    template: '%s | Sudeep Silwal',
+    default: 'Sudeep Blog',
+    template: '%s | Sudeep Blog',
   },
+
   description:
-    'Articles about web development, programming, technology and projects by Sudeep Silwal.',
+    'Articles about technology, web development, health, lifestyle, and interesting ideas.',
+
+  keywords: [
+    'Sudeep Silwal',
+    'Blog',
+    'Technology',
+    'Web Development',
+    'Health',
+    'Lifestyle',
+    'Fashion',
+    'Books',
+    'Summary',
+    'Review',
+    'Top 10',
+  ],
+
+  authors: [
+    {
+      name: 'Sudeep Silwal',
+      url: 'https://sudeepsilwal.com.np',
+    },
+  ],
+
+  creator: 'Sudeep Silwal',
+
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://blog.sudeepsilwal.com.np',
+    siteName: 'Sudeep Blog',
+
+    title: 'Sudeep Blog',
+
+    description:
+      'Articles about technology, web development, health, lifestyle, and interesting ideas.',
+
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Sudeep Blog',
+      },
+    ],
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+
+    title: 'Sudeep Blog',
+
+    description:
+      'Articles about technology, web development, health, lifestyle, and interesting ideas.',
+
+    images: ['/og-image.png'],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-background text-foreground">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background text-foreground`}
+      >
         {children}
-        <Analytics />
       </body>
     </html>
   )

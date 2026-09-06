@@ -18,6 +18,34 @@ export async function generateMetadata({ params }) {
   return {
     title: post.title,
     description: post.excerpt,
+
+    alternates: {
+      canonical: `/posts/${post.slug}`,
+    },
+
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `/posts/${post.slug}`,
+      siteName: 'Sudeep Blog',
+      type: 'article',
+
+      publishedTime: post.date,
+
+      images: [
+        {
+          url: post.image,
+          alt: post.title,
+        },
+      ],
+    },
+
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [post.image],
+    },
   }
 }
 
