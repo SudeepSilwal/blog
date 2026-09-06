@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import { posts } from '@/data/posts'
 
 export async function generateMetadata({ params }) {
