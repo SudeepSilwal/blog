@@ -316,12 +316,23 @@ export default async function PostPage({ params }) {
             © {new Date().getFullYear()} Sudeep Silwal. All rights reserved.
           </p>
 
-          <Link
-            href="/"
-            className="transition-colors hover:text-foreground"
-          >
-            Back to home ↑
-          </Link>
+          <div className="mb-8 flex items-center gap-2 text-sm text-muted-foreground">
+            <Link
+              href="/"
+              className="transition-colors hover:text-foreground"
+            >
+              Home
+            </Link>
+
+            <span className="opacity-50">/</span>
+
+            <Link
+              href="/posts"
+              className="transition-colors hover:text-foreground"
+            >
+              Posts
+            </Link>
+          </div>
         </div>
       </footer>
     </>
