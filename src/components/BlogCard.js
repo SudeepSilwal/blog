@@ -2,37 +2,44 @@ import Link from 'next/link'
 
 export default function BlogCard({ post }) {
   return (
-    <article className="group rounded-xl border border-border p-6 transition-all duration-300 hover:-translate-y-1 hover:border-foreground/20 hover:bg-muted/40 hover:shadow-lg">
+    <Link
+      href={`/posts/${post.slug}`}
+      className="group relative block overflow-hidden rounded-2xl border border-border bg-card"
+    >
+      {/* Background Image */}
+      {post.image && (
+        <img
+          src={post.image}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover opacity-20 transition duration-500 group-hover:scale-105 group-hover:opacity-30"
+        />
+      )}
 
-      <div className="flex items-center gap-3 text-xs text-muted-foreground">
-        <span>{post.category}</span>
-        <span>•</span>
-        <time>{post.date}</time>
-      </div>
+      {/* Dark / light overlay */}
+      <div className="absolute inset-0 bg-background/75" />
 
-      <h2 className="mt-4 text-xl font-semibold tracking-tight transition-colors group-hover:text-foreground">
-        {post.title}
-      </h2>
+      {/* Content */}
+      <div className="relative z-10 p-6 sm:p-8">
 
-      <p className="mt-3 line-clamp-3 text-sm leading-6 text-muted-foreground">
-        {post.excerpt}
-      </p>
+        <div className="flex items-center gap-2 text-xs text-muted-foreground">
+          <span>{post.category}</span>
+          <span>•</span>
+          <span>{post.readingTime}</span>
+        </div>
 
-      <div className="mt-5 flex items-center justify-between">
+        <h2 className="mt-4 text-2xl font-bold tracking-tight sm:text-3xl">
+          {post.title}
+        </h2>
 
-        <span className="text-xs text-muted-foreground">
-          {post.readingTime}
-        </span>
+        <p className="mt-4 leading-7 text-muted-foreground">
+          {post.excerpt}
+        </p>
 
-        <Link
-          href={`/posts/${post.slug}`}
-          className="text-sm font-medium text-muted-foreground underline underline-offset-4 transition-all group-hover:translate-x-1 group-hover:text-foreground"
-        >
+        <div className="mt-6 text-sm font-medium transition-transform group-hover:translate-x-1">
           Read article →
-        </Link>
+        </div>
 
       </div>
-
-    </article>
+    </Link>
   )
 }
