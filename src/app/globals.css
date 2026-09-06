@@ -60,10 +60,8 @@ body {
     Arial,
     Helvetica,
     sans-serif;
-
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-
   transition:
     background 0.25s ease,
     color 0.25s ease;
@@ -90,10 +88,8 @@ img {
 .prose p {
   margin-top: 1.4rem;
   margin-bottom: 1.4rem;
-
   font-size: 1.1rem;
   line-height: 1.9;
-
   color: var(--foreground);
 }
 
@@ -109,7 +105,6 @@ img {
 .prose h1 {
   margin-top: 4rem;
   margin-bottom: 1.5rem;
-
   font-size: 2.5rem;
   line-height: 1.15;
 }
@@ -117,7 +112,6 @@ img {
 .prose h2 {
   margin-top: 4rem;
   margin-bottom: 1.25rem;
-
   font-size: 2rem;
   line-height: 1.2;
 }
@@ -125,7 +119,6 @@ img {
 .prose h3 {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
-
   font-size: 1.45rem;
   line-height: 1.3;
 }
@@ -133,23 +126,132 @@ img {
 .prose h4 {
   margin-top: 2rem;
   margin-bottom: 0.75rem;
-
   font-size: 1.2rem;
 }
 
 /* =========================
-   NORMAL LISTS
+   DEFAULT CHECK POINTS
 ========================= */
 
-.prose ul,
+.prose ul {
+  margin: 1.5rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.prose ul li {
+  position: relative;
+  margin: 0.9rem 0;
+  padding-left: 2.2rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Check circle */
+
+.prose ul li::before {
+  content: "✓";
+
+  position: absolute;
+  top: 0.2rem;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.4rem;
+  height: 1.4rem;
+
+  border: 1px solid var(--border);
+  border-radius: 50%;
+
+  background: var(--card);
+  color: var(--foreground);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* =========================
+   ARROW POINTS
+========================= */
+
+.prose ul.article-arrow li::before {
+  content: "→";
+
+  width: 1.4rem;
+  height: 1.4rem;
+
+  border: none;
+  background: transparent;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* =========================
+   WARNING POINTS
+========================= */
+
+.prose ul.article-warning {
+  padding: 1rem 1.25rem;
+
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+
+  background: var(--card);
+}
+
+.prose ul.article-warning li::before {
+  content: "⚠";
+
+  width: auto;
+  height: auto;
+
+  border: none;
+  background: transparent;
+
+  font-size: 1rem;
+}
+
+/* =========================
+   INFO POINTS
+========================= */
+
+.prose ul.article-info {
+  padding: 1rem 1.25rem;
+
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+
+  background: var(--card);
+}
+
+.prose ul.article-info li::before {
+  content: "ℹ";
+
+  width: auto;
+  height: auto;
+
+  border: none;
+  background: transparent;
+
+  font-size: 1rem;
+}
+
+/* =========================
+   NUMBERED LISTS
+========================= */
+
 .prose ol {
   margin: 1.5rem 0;
   padding-left: 1.5rem;
 }
 
-.prose li {
-  margin: 0.75rem 0;
-  padding-left: 0.25rem;
+.prose ol li {
+  margin: 0.9rem 0;
+  padding-left: 0.4rem;
 
   font-size: 1.05rem;
   line-height: 1.7;
@@ -177,85 +279,7 @@ img {
 }
 
 /* =========================
-   TEXT ELEMENTS
-========================= */
-
-.prose strong {
-  color: var(--foreground);
-  font-weight: 700;
-}
-
-.prose a {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-/* =========================
-   ARTICLE IMAGES
-   Keeps original aspect ratio
-========================= */
-
-.prose img {
-  display: block;
-
-  width: 600px;
-  max-width: 100%;
-  height: auto;
-
-  margin: 2.5rem auto;
-
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-}
-
-/* =========================
-   CHECK POINTS ✓
-========================= */
-
-.article-check {
-  margin: 1rem 0;
-  padding: 1rem 1.25rem;
-
-  border-left: 3px solid var(--foreground);
-  border-radius: 0.5rem;
-
-  background: var(--card);
-
-  line-height: 1.7;
-
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease;
-}
-
-.article-check:hover {
-  transform: translateX(4px);
-}
-
-/* =========================
-   ARROW POINTS →
-========================= */
-
-.article-arrow {
-  margin: 1rem 0;
-  padding: 1rem 1.25rem;
-
-  border-left: 3px solid var(--border);
-  border-radius: 0.5rem;
-
-  background: var(--card);
-
-  line-height: 1.7;
-
-  transition: transform 0.2s ease;
-}
-
-.article-arrow:hover {
-  transform: translateX(4px);
-}
-
-/* =========================
-   HIGHLIGHT BOX ✦
+   HIGHLIGHT BOX
 ========================= */
 
 .article-highlight {
@@ -273,35 +297,34 @@ img {
 }
 
 /* =========================
-   WARNING BOX ⚠
+   TEXT ELEMENTS
 ========================= */
 
-.article-warning {
-  margin: 2rem 0;
-  padding: 1.25rem 1.5rem;
+.prose strong {
+  color: var(--foreground);
+  font-weight: 700;
+}
 
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-
-  background: var(--card);
-
-  line-height: 1.7;
+.prose a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 /* =========================
-   INFORMATION BOX ℹ
+   ARTICLE IMAGES
 ========================= */
 
-.article-info {
-  margin: 2rem 0;
-  padding: 1.25rem 1.5rem;
+.prose img {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+
+  margin: 2.5rem auto;
 
   border: 1px solid var(--border);
   border-radius: 1rem;
-
-  background: var(--card);
-
-  line-height: 1.7;
 }
 
 /* =========================
@@ -310,12 +333,13 @@ img {
 
 .prose hr {
   margin: 3rem 0;
+
   border: 0;
   border-top: 1px solid var(--border);
 }
 
 /* =========================
-   CODE
+   INLINE CODE
 ========================= */
 
 .prose code {
@@ -327,6 +351,10 @@ img {
 
   font-size: 0.9em;
 }
+
+/* =========================
+   CODE BLOCK
+========================= */
 
 .prose pre {
   margin: 2rem 0;
@@ -366,7 +394,168 @@ img {
 }
 
 /* =========================
-   MOBILE RESPONSIVE
+   TEXT SELECTION
+========================= */
+
+::selection {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+/* =========================
+   3D SCROLL TO TOP BUTTON
+========================= */
+
+.scroll-to-top {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 50;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+  border-radius: 50%;
+
+  background: var(--background);
+  color: var(--foreground);
+
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform:
+    translateY(30px)
+    rotate(-90deg)
+    scale(0.7);
+
+  box-shadow:
+    0 12px 25px rgba(0, 0, 0, 0.18),
+    inset 0 2px 3px rgba(255, 255, 255, 0.15),
+    inset 0 -3px 5px rgba(0, 0, 0, 0.12);
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease,
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s ease;
+}
+
+.scroll-to-top-visible {
+  opacity: 1;
+  visibility: visible;
+
+  transform:
+    translateY(0)
+    rotate(0deg)
+    scale(1);
+
+  animation: scrollButtonFloat 3s ease-in-out infinite;
+}
+
+/* Rotating ring */
+
+.scroll-to-top-ring {
+  position: absolute;
+
+  inset: 4px;
+
+  border: 2px solid transparent;
+  border-top-color: var(--foreground);
+  border-right-color: var(--muted);
+
+  border-radius: 50%;
+
+  opacity: 0.7;
+
+  animation: scrollButtonRotate 2.5s linear infinite;
+}
+
+/* Arrow */
+
+.scroll-to-top-arrow {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  transition: transform 0.3s ease;
+}
+
+/* Hover */
+
+.scroll-to-top:hover {
+  transform:
+    translateY(-8px)
+    scale(1.12);
+
+  box-shadow:
+    0 20px 35px rgba(0, 0, 0, 0.25),
+    0 6px 0 rgba(0, 0, 0, 0.12),
+    inset 0 2px 3px rgba(255, 255, 255, 0.2);
+}
+
+.scroll-to-top:hover .scroll-to-top-arrow {
+  transform: translateY(-4px) scale(1.15);
+}
+
+/* Click */
+
+.scroll-to-top:active {
+  transform:
+    translateY(3px)
+    scale(0.95);
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.18),
+    inset 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Floating animation */
+
+@keyframes scrollButtonFloat {
+  0%,
+  100% {
+    margin-bottom: 0;
+  }
+
+  50% {
+    margin-bottom: 8px;
+  }
+}
+
+/* Rotating animation */
+
+@keyframes scrollButtonRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   MOBILE
 ========================= */
 
 @media (max-width: 640px) {
@@ -389,96 +578,88 @@ img {
     font-size: 1.3rem;
   }
 
-  .prose li {
+  .prose ul li,
+  .prose ol li {
     font-size: 1rem;
   }
 
   .prose img {
-    width: 100%;
     margin: 2rem auto;
     border-radius: 0.75rem;
   }
 
-  .article-check,
-  .article-arrow,
-  .article-highlight,
-  .article-warning,
-  .article-info {
-    padding: 1rem;
+  .scroll-to-top {
+    right: 18px;
+    bottom: 18px;
+
+    width: 52px;
+    height: 52px;
+  }
+
+  .scroll-to-top-arrow {
+    width: 34px;
+    height: 34px;
+
+    font-size: 21px;
   }
 }
 
 /* =========================
-   TEXT SELECTION
+   CUSTOM BLOG LISTS
 ========================= */
 
-::selection {
-  background: var(--foreground);
-  color: var(--background);
+.prose .check-list,
+.prose .arrow-list,
+.prose .warning-list,
+.prose .info-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
 }
 
-/* Scroll to top*/
-
-```css
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-5px);
-  }
+.prose .check-list li,
+.prose .arrow-list li,
+.prose .warning-list li,
+.prose .info-list li {
+  position: relative;
+  margin: 0.8rem 0;
+  padding-left: 2rem;
 }
 
-.scroll-to-top {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 50;
+/* ✓ CHECK LIST */
 
-  width: 64px;
-  height: 44px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: white;
-
-  font-size: 20px;
-  font-weight: 600;
-  cursor: pointer;
-
-  box-shadow:
-    0 6px 0 rgba(0, 0, 0, 0.15),
-    0 10px 20px rgba(0, 0, 0, 0.12);
-
-  animation: float 3s ease-in-out infinite;
-  transition: all 0.3s ease;
+.prose .check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
 }
 
-.scroll-to-top:hover {
-  transform: translateY(-8px) scale(1.05);
-  box-shadow:
-    0 10px 0 rgba(0, 0, 0, 0.15),
-    0 18px 30px rgba(0, 0, 0, 0.18);
+/* → ARROW LIST */
+
+.prose .arrow-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
 }
 
-.scroll-to-top:active {
-  transform: translateY(2px) scale(0.95);
-  box-shadow:
-    0 2px 0 rgba(0, 0, 0, 0.15),
-    0 5px 10px rgba(0, 0, 0, 0.1);
+/* ⚠ WARNING LIST */
+
+.prose .warning-list li::before {
+  content: "⚠";
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
-.scroll-to-top span {
-  transition: transform 0.3s ease;
-}
+/* ℹ INFO LIST */
 
-.scroll-to-top:hover span {
-  transform: translateY(-4px);
+.prose .info-list li::before {
+  content: "ℹ";
+  position: absolute;
+  left: 0;
+  top: 0;
 }
-```

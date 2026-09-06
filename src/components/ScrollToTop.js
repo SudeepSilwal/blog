@@ -1,5 +1,6 @@
+'use client'
+
 import { useEffect, useState } from 'react'
-import './ScrollToTop.css'
 
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false)
@@ -10,6 +11,8 @@ export default function ScrollToTop() {
     }
 
     window.addEventListener('scroll', handleScroll)
+
+    handleScroll()
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
@@ -23,16 +26,14 @@ export default function ScrollToTop() {
     })
   }
 
-  if (!visible) return null
-
   return (
     <button
       onClick={scrollToTop}
+      className={`scroll-to-top ${visible ? 'scroll-to-top-visible' : ''}`}
       aria-label="Scroll to top"
-      className="scroll-to-top"
     >
-      <span>↑</span>
+      <span className="scroll-to-top-ring" />
+      <span className="scroll-to-top-arrow">↑</span>
     </button>
   )
 }
-```
