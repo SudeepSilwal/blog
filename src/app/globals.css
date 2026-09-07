@@ -53,15 +53,19 @@ html {
 
 body {
   margin: 0;
+
   background: var(--background);
   color: var(--foreground);
+
   font-family:
     var(--font-geist-sans),
     Arial,
     Helvetica,
     sans-serif;
+
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+
   transition:
     background 0.25s ease,
     color 0.25s ease;
@@ -88,8 +92,10 @@ img {
 .prose p {
   margin-top: 1.4rem;
   margin-bottom: 1.4rem;
+
   font-size: 1.1rem;
   line-height: 1.9;
+
   color: var(--foreground);
 }
 
@@ -98,13 +104,16 @@ img {
 .prose h3,
 .prose h4 {
   color: var(--foreground);
+
   font-weight: 700;
+
   letter-spacing: -0.025em;
 }
 
 .prose h1 {
   margin-top: 4rem;
   margin-bottom: 1.5rem;
+
   font-size: 2.5rem;
   line-height: 1.15;
 }
@@ -112,6 +121,7 @@ img {
 .prose h2 {
   margin-top: 4rem;
   margin-bottom: 1.25rem;
+
   font-size: 2rem;
   line-height: 1.2;
 }
@@ -119,6 +129,7 @@ img {
 .prose h3 {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
+
   font-size: 1.45rem;
   line-height: 1.3;
 }
@@ -126,6 +137,7 @@ img {
 .prose h4 {
   margin-top: 2rem;
   margin-bottom: 0.75rem;
+
   font-size: 1.2rem;
 }
 
@@ -136,13 +148,16 @@ img {
 .prose ul {
   margin: 1.5rem 0;
   padding: 0;
+
   list-style: none;
 }
 
 .prose ul li {
   position: relative;
+
   margin: 0.9rem 0;
   padding-left: 2.2rem;
+
   font-size: 1.05rem;
   line-height: 1.7;
 }
@@ -157,6 +172,7 @@ img {
   left: 0;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -184,6 +200,7 @@ img {
   height: 1.4rem;
 
   border: none;
+
   background: transparent;
 
   font-size: 1.2rem;
@@ -210,6 +227,7 @@ img {
   height: auto;
 
   border: none;
+
   background: transparent;
 
   font-size: 1rem;
@@ -235,6 +253,7 @@ img {
   height: auto;
 
   border: none;
+
   background: transparent;
 
   font-size: 1rem;
@@ -293,6 +312,7 @@ img {
 
   font-size: 1.05rem;
   font-weight: 500;
+
   line-height: 1.7;
 }
 
@@ -374,6 +394,7 @@ img {
 
 .prose table {
   width: 100%;
+
   margin: 2rem 0;
 
   border-collapse: collapse;
@@ -403,23 +424,27 @@ img {
 }
 
 /* =========================
-   3D SCROLL TO TOP BUTTON
+   SCROLL TO TOP BUTTON
+   WITH READING PROGRESS
 ========================= */
 
 .scroll-to-top {
   position: fixed;
+
   right: 28px;
   bottom: 28px;
+
   z-index: 50;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
   width: 58px;
   height: 58px;
 
-  overflow: hidden;
+  padding: 0;
 
   border: 1px solid var(--border);
   border-radius: 50%;
@@ -449,6 +474,10 @@ img {
     box-shadow 0.3s ease;
 }
 
+/* =========================
+   SHOW BUTTON
+========================= */
+
 .scroll-to-top-visible {
   opacity: 1;
   visibility: visible;
@@ -457,35 +486,79 @@ img {
     translateY(0)
     rotate(0deg)
     scale(1);
-
-  animation: scrollButtonFloat 3s ease-in-out infinite;
 }
 
-/* Rotating ring */
+/* =========================
+   READING PROGRESS RING
+========================= */
 
 .scroll-to-top-ring {
   position: absolute;
-
-  inset: 4px;
-
-  border: 2px solid transparent;
-  border-top-color: var(--foreground);
-  border-right-color: var(--muted);
+  inset: 0;
 
   border-radius: 50%;
 
-  opacity: 0.7;
+  background: conic-gradient(
+    var(--foreground) var(--progress),
+    var(--border) var(--progress)
+  );
 
-  animation: scrollButtonRotate 2.5s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 1;
+
+  /*
+    Makes the progress movement visually smoother
+  */
+  transition: background 0.12s linear;
 }
 
-/* Arrow */
+/* Inner circle */
+.scroll-to-top-inner {
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+
+  background: var(--background);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================
+   INNER CIRCLE
+========================= */
+
+.scroll-to-top-inner {
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+
+  background: var(--background);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   ARROW
+========================= */
 
 .scroll-to-top-arrow {
   position: relative;
+
   z-index: 2;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -494,17 +567,26 @@ img {
 
   border-radius: 50%;
 
+  color: var(--foreground);
+
   font-size: 24px;
   font-weight: 700;
 
-  transition: transform 0.3s ease;
+  line-height: 1;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
-/* Hover */
+/* =========================
+   HOVER
+========================= */
 
 .scroll-to-top:hover {
   transform:
     translateY(-8px)
+    rotate(0deg)
     scale(1.12);
 
   box-shadow:
@@ -514,14 +596,19 @@ img {
 }
 
 .scroll-to-top:hover .scroll-to-top-arrow {
-  transform: translateY(-4px) scale(1.15);
+  transform:
+    translateY(-4px)
+    scale(1.15);
 }
 
-/* Click */
+/* =========================
+   CLICK
+========================= */
 
 .scroll-to-top:active {
   transform:
     translateY(3px)
+    rotate(0deg)
     scale(0.95);
 
   box-shadow:
@@ -529,7 +616,9 @@ img {
     inset 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Floating animation */
+/* =========================
+   FLOATING ANIMATION
+========================= */
 
 @keyframes scrollButtonFloat {
   0%,
@@ -539,18 +628,6 @@ img {
 
   50% {
     margin-bottom: 8px;
-  }
-}
-
-/* Rotating animation */
-
-@keyframes scrollButtonRotate {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
   }
 }
 
@@ -596,6 +673,15 @@ img {
     height: 52px;
   }
 
+  .scroll-to-top-ring {
+    inset: 3px;
+  }
+
+  .scroll-to-top-inner {
+    width: 40px;
+    height: 40px;
+  }
+
   .scroll-to-top-arrow {
     width: 34px;
     height: 34px;
@@ -613,6 +699,7 @@ img {
 .prose .warning-list,
 .prose .info-list {
   list-style: none;
+
   padding-left: 0;
   margin: 1.5rem 0;
 }
@@ -622,6 +709,7 @@ img {
 .prose .warning-list li,
 .prose .info-list li {
   position: relative;
+
   margin: 0.8rem 0;
   padding-left: 2rem;
 }
@@ -630,9 +718,12 @@ img {
 
 .prose .check-list li::before {
   content: "✓";
+
   position: absolute;
+
   left: 0;
   top: 0;
+
   font-weight: 700;
 }
 
@@ -640,9 +731,12 @@ img {
 
 .prose .arrow-list li::before {
   content: "→";
+
   position: absolute;
+
   left: 0;
   top: 0;
+
   font-weight: 700;
 }
 
@@ -650,7 +744,9 @@ img {
 
 .prose .warning-list li::before {
   content: "⚠";
+
   position: absolute;
+
   left: 0;
   top: 0;
 }
@@ -659,7 +755,9 @@ img {
 
 .prose .info-list li::before {
   content: "ℹ";
+
   position: absolute;
+
   left: 0;
   top: 0;
 }
