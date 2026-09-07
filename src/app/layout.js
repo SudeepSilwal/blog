@@ -47,7 +47,7 @@ export const metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Sudeep Blog',
+        alt: "Sudeep Silwal's Blog",
       },
     ],
   },
