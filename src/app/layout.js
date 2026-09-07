@@ -24,34 +24,6 @@ export const metadata = {
   description:
     'Articles about technology, web development, health, lifestyle, and interesting ideas.',
 
-  keywords: [
-    'Sudeep Silwal',
-    "Sudeep Silwal's Blog",
-    'Sudeep Silwal Blog',
-    'Sudeep Silwal Website',
-    'Sudeep Silwal Developer',
-    'Sudeep Silwal Programming',
-    'Sudeep Silwal Coding',
-    'Sudeep Silwal Next.js',
-    'Sudeep Silwal React',
-    'Sudeep Silwal JavaScript',
-    'Technology',
-    'Web Development',
-    'Programming',
-    'Coding',
-    'React',
-    'Next.js',
-    'JavaScript',
-    'Health',
-    'Lifestyle',
-    'Fashion',
-    'Books',
-    'Book Reviews',
-    'Reviews',
-    'Summaries',
-    'Top 10',
-    'Tips and Guides',
-  ],
 
   authors: [
     {

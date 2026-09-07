@@ -428,7 +428,7 @@ export default function Home() {
                 href="/posts"
                 className="rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
               >
-                Browse articles 
+                Browse articles →
               </Link>
 
               <Link

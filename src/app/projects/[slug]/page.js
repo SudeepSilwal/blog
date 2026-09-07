@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
+import Image from 'next/image'
 import Link from 'next/link'
-import Header from '@/components/Header'
 import { projects } from '@/data/projects'
 import ScrollToTop from '@/components/ScrollToTop'
 
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }) {
       images: [
         {
           url: project.image,
-          alt: project.title,
+          alt: project.imageAlt || project.title,
         },
       ],
     },
@@ -129,6 +129,7 @@ export default async function ProjectPage({ params }) {
 
   return (
     <>
+      {/* Article structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -136,6 +137,7 @@ export default async function ProjectPage({ params }) {
         }}
       />
 
+      {/* Breadcrumb structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -182,9 +184,13 @@ export default async function ProjectPage({ params }) {
             {/* Hero image */}
             {project.image && (
               <div className="mt-10 w-full">
-                <img
+                <Image
                   src={project.image}
+                  alt={project.imageAlt || project.title}
+                  width={1200}
+                  height={630}
                   className="h-auto w-full rounded-xl border border-border"
+                  priority
                 />
               </div>
             )}
@@ -217,7 +223,8 @@ export default async function ProjectPage({ params }) {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold transition hover:bg-muted"
                 >
-                  <span>🚀</span> Live Demo
+                  <span>🚀</span>
+                  Live Demo
                 </a>
               )}
             </div>
@@ -275,8 +282,12 @@ export default async function ProjectPage({ params }) {
                   >
                     {/* Background image */}
                     {relatedProject.image && (
-                      <img
+                      <Image
                         src={relatedProject.image}
+                        alt=""
+                        width={1200}
+                        height={630}
+                        aria-hidden="true"
                         className="absolute inset-0 h-full w-full object-cover opacity-40 transition duration-500 group-hover:scale-105 group-hover:opacity-50"
                       />
                     )}
@@ -308,7 +319,6 @@ export default async function ProjectPage({ params }) {
                     </div>
                   </Link>
                 ))}
-
               </div>
             </section>
           )}
