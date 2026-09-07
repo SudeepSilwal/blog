@@ -1,4 +1,6 @@
 import { Geist, Geist_Mono } from 'next/font/google'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import './globals.css'
 
 const geistSans = Geist({
@@ -15,8 +17,8 @@ export const metadata = {
   metadataBase: new URL('https://blog.sudeepsilwal.com.np'),
 
   title: {
-    default: 'Sudeep Blog',
-    template: '%s | Sudeep Blog',
+    default: "Sudeep's Blog",
+    template: "%s | Sudeep's Blog",
   },
 
   description:
@@ -24,16 +26,31 @@ export const metadata = {
 
   keywords: [
     'Sudeep Silwal',
-    'Blog',
+    "Sudeep Silwal's Blog",
+    'Sudeep Silwal Blog',
+    'Sudeep Silwal Website',
+    'Sudeep Silwal Developer',
+    'Sudeep Silwal Programming',
+    'Sudeep Silwal Coding',
+    'Sudeep Silwal Next.js',
+    'Sudeep Silwal React',
+    'Sudeep Silwal JavaScript',
     'Technology',
     'Web Development',
+    'Programming',
+    'Coding',
+    'React',
+    'Next.js',
+    'JavaScript',
     'Health',
     'Lifestyle',
     'Fashion',
     'Books',
-    'Summary',
-    'Review',
+    'Book Reviews',
+    'Reviews',
+    'Summaries',
     'Top 10',
+    'Tips and Guides',
   ],
 
   authors: [
@@ -50,12 +67,9 @@ export const metadata = {
     locale: 'en_US',
     url: 'https://blog.sudeepsilwal.com.np',
     siteName: 'Sudeep Blog',
-
     title: 'Sudeep Blog',
-
     description:
       'Articles about technology, web development, health, lifestyle, and interesting ideas.',
-
     images: [
       {
         url: '/og-image.png',
@@ -68,12 +82,9 @@ export const metadata = {
 
   twitter: {
     card: 'summary_large_image',
-
     title: 'Sudeep Blog',
-
     description:
       'Articles about technology, web development, health, lifestyle, and interesting ideas.',
-
     images: ['/og-image.png'],
   },
 
@@ -85,34 +96,38 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   const personSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Sudeep Silwal',
+    url: 'https://sudeepsilwal.com.np',
+    sameAs: [
+      'https://www.linkedin.com/in/sudeepsilwal',
+      'https://x.com/thesudeepsilwal',
+      'https://github.com/SudeepSilwal',
+      'https://www.youtube.com/@thesudeepsilwal',
+    ],
+  }
 
-  name: 'Sudeep Silwal',
-
-  url: 'https://sudeepsilwal.com.np',
-
-  sameAs: [
-    'https://www.linkedin.com/in/sudeepsilwal',
-    'https://x.com/thesudeepsilwal',
-    'https://github.com/SudeepSilwal',
-    'https://www.youtube.com/@thesudeepsilwal',
-  ],
-}
   return (
     <html lang="en">
       <body
-  className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background text-foreground`}
->
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify(personSchema),
-    }}
-  />
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background text-foreground`}
+      >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personSchema),
+          }}
+        />
 
-  {children}
-</body>
+        <Header />
+
+        <main className="flex-1">
+          {children}
+        </main>
+
+        <Footer />
+      </body>
     </html>
   )
 }

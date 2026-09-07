@@ -24,7 +24,7 @@ export default function Footer() {
             href="https://blog.sudeepsilwal.com.np"
             className="transition-colors hover:text-foreground"
           >
-            Blog
+            Posts
           </a>
 
         </div>

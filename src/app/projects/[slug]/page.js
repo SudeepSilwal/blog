@@ -1,83 +1,91 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { posts } from '@/data/posts'
+import Header from '@/components/Header'
+import { projects } from '@/data/projects'
 import ScrollToTop from '@/components/ScrollToTop'
 
 export async function generateMetadata({ params }) {
   const { slug } = await params
 
-  const post = posts.find((post) => post.slug === slug)
+  const project = projects.find((project) => project.slug === slug)
 
-  if (!post) {
+  if (!project) {
     return {
-      title: 'Post Not Found',
+      title: 'Project Not Found',
     }
   }
 
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: project.title,
+    description: project.excerpt,
 
     alternates: {
-      canonical: `/posts/${post.slug}`,
+      canonical: `/projects/${project.slug}`,
     },
 
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      url: `/posts/${post.slug}`,
+      title: project.title,
+      description: project.excerpt,
+      url: `/projects/${project.slug}`,
       siteName: 'Sudeep Blog',
       type: 'article',
-      publishedTime: post.date,
+
+      publishedTime: project.date,
 
       images: [
         {
-          url: post.image,
-          alt: post.title,
+          url: project.image,
+          alt: project.title,
         },
       ],
     },
 
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
-      description: post.excerpt,
-      images: [post.image],
+      title: project.title,
+      description: project.excerpt,
+      images: [project.image],
     },
   }
 }
 
-export default async function PostPage({ params }) {
+export default async function ProjectPage({ params }) {
   const { slug } = await params
 
-  const post = posts.find((post) => post.slug === slug)
+  const project = projects.find((project) => project.slug === slug)
 
-  if (!post) {
+  if (!project) {
     notFound()
   }
 
-  const relatedPosts = posts
+  // Find projects with similar tags
+  const relatedProjects = projects
     .filter(
       (item) =>
-        item.id !== post.id &&
+        item.id !== project.id &&
         item.tags &&
-        post.tags &&
-        item.tags.some((tag) => post.tags.includes(tag))
+        project.tags &&
+        item.tags.some((tag) => project.tags.includes(tag))
     )
     .slice(0, 3)
 
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
-    headline: post.title,
-    description: post.excerpt,
-    image: post.image,
-    datePublished: post.date,
-    dateModified: post.modifiedDate || post.date,
+
+    headline: project.title,
+
+    description: project.excerpt,
+
+    image: project.image,
+
+    datePublished: project.date,
+
+    dateModified: project.modifiedDate || project.date,
 
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://blog.sudeepsilwal.com.np/posts/${post.slug}`,
+      '@id': `https://blog.sudeepsilwal.com.np/projects/${project.slug}`,
     },
 
     author: {
@@ -107,21 +115,20 @@ export default async function PostPage({ params }) {
       {
         '@type': 'ListItem',
         position: 2,
-        name: 'Posts',
-        item: 'https://blog.sudeepsilwal.com.np/posts',
+        name: 'Projects',
+        item: 'https://blog.sudeepsilwal.com.np/projects',
       },
       {
         '@type': 'ListItem',
         position: 3,
-        name: post.title,
-        item: `https://blog.sudeepsilwal.com.np/posts/${post.slug}`,
+        name: project.title,
+        item: `https://blog.sudeepsilwal.com.np/projects/${project.slug}`,
       },
     ],
   }
 
   return (
     <>
-      {/* Article Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -129,7 +136,6 @@ export default async function PostPage({ params }) {
         }}
       />
 
-      {/* Breadcrumb Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -142,74 +148,89 @@ export default async function PostPage({ params }) {
 
           {/* Back button */}
           <Link
-            href="/posts"
+            href="/projects"
             className="text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
-            ← Back to posts
+            ← Back to projects
           </Link>
 
           <article className="mt-10">
 
-            {/* Post information */}
+            {/* Project information */}
             <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-              <span>{post.category}</span>
+              <span>{project.category}</span>
+
               <span>•</span>
-              <time>{post.date}</time>
+
+              <time>{project.date}</time>
+
               <span>•</span>
-              <span>{post.readingTime}</span>
+
+              <span>{project.readingTime}</span>
             </div>
 
             {/* Title */}
             <h1 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">
-              {post.title}
+              {project.title}
             </h1>
 
             {/* Excerpt */}
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              {post.excerpt}
+              {project.excerpt}
             </p>
 
             {/* Hero image */}
-            {post.image && (
+            {project.image && (
               <div className="mt-10 w-full">
                 <img
-                  src={post.image}
-                  alt={post.title}
+                  src={project.image}
                   className="h-auto w-full rounded-xl border border-border"
                 />
               </div>
             )}
 
-            {/* Blog content */}
+            {/* Project content */}
             <div
               className="prose mt-12 max-w-none"
               dangerouslySetInnerHTML={{
-                __html: post.content,
+                __html: project.content,
               }}
             />
 
-            {/* YouTube video */}
-            {post.youtubeId && (
-              <div className="mt-12 w-full overflow-hidden rounded-xl border border-border">
-                <iframe
-                  className="aspect-video w-full"
-                  src={`https://www.youtube.com/embed/${post.youtubeId}`}
-                  title={post.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-            )}
+            {/* GitHub and Demo buttons */}
+            <div className="mt-12 flex flex-wrap gap-4">
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+                >
+                  View on GitHub
+                </a>
+              )}
+
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold transition hover:bg-muted"
+                >
+                  <span>🚀</span> Live Demo
+                </a>
+              )}
+            </div>
 
             {/* Tags */}
-            {post.tags && post.tags.length > 0 && (
+            {project.tags && project.tags.length > 0 && (
               <div className="mt-16 border-t border-border pt-8">
                 <h3 className="text-sm font-semibold text-muted-foreground">
                   Tags
                 </h3>
 
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {post.tags.map((tag) => (
+                  {project.tags.map((tag) => (
                     <span
                       key={tag}
                       className="rounded-full border border-border px-3 py-1 text-sm text-muted-foreground"
@@ -223,23 +244,22 @@ export default async function PostPage({ params }) {
 
           </article>
 
-          {/* Related Posts */}
-          {relatedPosts.length > 0 && (
+          {/* Related Projects */}
+          {relatedProjects.length > 0 && (
             <section className="mt-16 border-t border-border pt-10">
-
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm text-muted-foreground">
-                    Keep reading
+                    Keep exploring
                   </p>
 
                   <h2 className="mt-1 text-2xl font-bold tracking-tight">
-                    Similar posts
+                    Similar projects
                   </h2>
                 </div>
 
                 <Link
-                  href="/posts"
+                  href="/projects"
                   className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
                   View all →
@@ -247,17 +267,16 @@ export default async function PostPage({ params }) {
               </div>
 
               <div className="mt-8 grid gap-5 sm:grid-cols-2">
-                {relatedPosts.map((relatedPost) => (
+                {relatedProjects.map((relatedProject) => (
                   <Link
-                    key={relatedPost.id}
-                    href={`/posts/${relatedPost.slug}`}
+                    key={relatedProject.id}
+                    href={`/projects/${relatedProject.slug}`}
                     className="group relative min-h-[260px] overflow-hidden rounded-xl border border-border"
                   >
                     {/* Background image */}
-                    {relatedPost.image && (
+                    {relatedProject.image && (
                       <img
-                        src={relatedPost.image}
-                        alt={relatedPost.title}
+                        src={relatedProject.image}
                         className="absolute inset-0 h-full w-full object-cover opacity-40 transition duration-500 group-hover:scale-105 group-hover:opacity-50"
                       />
                     )}
@@ -267,37 +286,37 @@ export default async function PostPage({ params }) {
 
                     {/* Card content */}
                     <div className="relative z-10 flex h-full flex-col justify-end p-6">
-
                       <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-                        <span>{relatedPost.category}</span>
+                        <span>{relatedProject.category}</span>
+
                         <span>•</span>
-                        <span>{relatedPost.readingTime}</span>
+
+                        <span>{relatedProject.readingTime}</span>
                       </div>
 
                       <h3 className="mt-3 text-xl font-bold tracking-tight">
-                        {relatedPost.title}
+                        {relatedProject.title}
                       </h3>
 
                       <p className="mt-3 line-clamp-2 text-sm leading-6 text-muted-foreground">
-                        {relatedPost.excerpt}
+                        {relatedProject.excerpt}
                       </p>
 
                       <span className="mt-5 text-sm font-semibold transition-transform duration-300 group-hover:translate-x-1">
-                        Read article →
+                        View project →
                       </span>
-
                     </div>
                   </Link>
                 ))}
-              </div>
 
+              </div>
             </section>
           )}
 
         </div>
       </main>
 
-      {/* Scroll to top */}
+      {/* Scroll to top button */}
       <ScrollToTop />
     </>
   )

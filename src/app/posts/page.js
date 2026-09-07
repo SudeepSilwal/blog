@@ -10,8 +10,6 @@ export const metadata = {
 export default function PostsPage() {
   return (
     <>
-      <Header />
-
       <main className="mx-auto min-h-screen max-w-5xl px-5 pb-24 pt-16 sm:px-6">
         <Link
           href="/"
@@ -31,7 +29,7 @@ export default function PostsPage() {
 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">
             Explore articles about health, technology, web development,
-            projects, and other interesting topics.
+             and other interesting topics.
           </p>
         </section>
 
@@ -81,12 +79,6 @@ export default function PostsPage() {
           ))}
         </section>
       </main>
-
-      <footer className="border-t border-border">
-        <div className="mx-auto max-w-5xl px-5 py-8 text-center text-sm text-muted-foreground sm:px-6">
-          © {new Date().getFullYear()} Sudeep Silwal. All rights reserved.
-        </div>
-      </footer>
     </>
   )
 }
