@@ -18,6 +18,15 @@ export const metadata = {
       'Articles about technology, web development, health, lifestyle, projects, books, reviews, and interesting ideas.',
     url: '/',
     type: 'website',
+     images: [
+    {
+      url: '/og-image.png',
+      width: 1200,
+      height: 630,
+      alt: "Sudeep Silwal's Blog",
+    },
+  ],
+    
   },
 
   twitter: {
@@ -25,6 +34,7 @@ export const metadata = {
     title: "Sudeep Silwal's Blog",
     description:
       'Articles about technology, web development, health, lifestyle, projects, books, reviews, and interesting ideas.',
+      images: ['/og-image.png'],
   },
 }
 
