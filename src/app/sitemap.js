@@ -25,25 +25,25 @@ export default function sitemap() {
     },
   ]
 
-  const postRoutes = posts.map((post) => ({
-    url: `${baseUrl}/posts/${post.slug}`,
-    lastModified: new Date(post.date),
-    changeFrequency: 'monthly',
-    priority: 0.8,
-  }))
+  const postRoutes = posts
+    .filter((post) => !post.draft)
+    .map((post) => ({
+      url: `${baseUrl}/posts/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    }))
 
-  const projectRoutes = projects.map((project) => ({
-    url: `${baseUrl}/projects/${project.slug}`,
-    lastModified: new Date(
-      project.modifiedDate || project.date || new Date()
-    ),
-    changeFrequency: 'monthly',
-    priority: 0.7,
-  }))
+  const projectRoutes = projects
+    .filter((project) => !project.draft)
+    .map((project) => ({
+      url: `${baseUrl}/projects/${project.slug}`,
+      lastModified: new Date(
+        project.modifiedDate || project.date || new Date()
+      ),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    }))
 
-  return [
-    ...staticRoutes,
-    ...postRoutes,
-    ...projectRoutes,
-  ]
+  return [...staticRoutes, ...postRoutes, ...projectRoutes]
 }
