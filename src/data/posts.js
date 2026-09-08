@@ -384,9 +384,8 @@ export const posts = [
       'Healthy Drinks',
     ],
 
-    date: '2026-09-06',
-
-    modifiedDate: '2026-09-06',
+    date: '2026-09-06T00:00:00+05:45',       // +05:45 is Nepal Time
+    modifiedDate: '2026-09-06T00:00:00+05:45',
 
     readingTime: '7 min read',
 
