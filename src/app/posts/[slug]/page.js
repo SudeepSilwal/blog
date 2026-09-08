@@ -174,7 +174,7 @@ export default async function PostPage({ params }) {
               <div className="mt-10 w-full">
                 <img
                   src={post.image}
-                  alt={project.imageAlt || project.title}
+                  alt={post.imageAlt || post.title}
                   className="h-auto w-full rounded-xl border border-border"
                 />
               </div>

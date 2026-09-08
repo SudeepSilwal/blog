@@ -2,6 +2,7 @@ export const projects = [
   {
     id: 1,
     title: 'E-Commerce Platform',
+    draft: true,
     imageAlt:'',
     slug: 'ecommerce-platform',
     excerpt: 'A full-featured e-commerce platform with payment integration, inventory management, and real-time order tracking.',
@@ -68,6 +69,7 @@ export const projects = [
   {
     id: 2,
     title: 'Task Management App',
+    draft: true,
     slug: 'task-management-app',
     excerpt: 'A collaborative task management application with real-time updates, team workspaces, and progress tracking.',
     content: `
@@ -126,6 +128,7 @@ export const projects = [
   {
     id: 3,
     title: 'Weather Dashboard',
+    draft: true,
     slug: 'weather-dashboard',
     excerpt: 'A beautiful weather dashboard with interactive maps, hourly forecasts, and severe weather alerts.',
     content: `
@@ -185,6 +188,7 @@ export const projects = [
   {
     id: 4,
     title: 'AI Image Generator',
+    draft: true,
     slug: 'ai-image-generator',
     excerpt: 'An AI-powered image generator that creates unique images from text descriptions using stable diffusion.',
     content: `
