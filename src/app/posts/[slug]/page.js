@@ -154,7 +154,13 @@ export default async function PostPage({ params }) {
             <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
               <span>{post.category}</span>
               <span>•</span>
-              <time>{post.date}</time>
+              <time dateTime={post.date}>
+                {new Date(post.date).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+              </time>
               <span>•</span>
               <span>{post.readingTime}</span>
             </div>
