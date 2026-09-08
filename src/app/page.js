@@ -21,8 +21,8 @@ export const metadata = {
      images: [
     {
       url: '/og-image.png',
-      width: 1200,
-      height: 630,
+      width: 1734,
+      height: 907,
       alt: "Sudeep Silwal's Blog",
     },
   ],

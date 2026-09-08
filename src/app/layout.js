@@ -35,22 +35,28 @@ export const metadata = {
   creator: 'Sudeep Silwal',
 
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://blog.sudeepsilwal.com.np',
-    siteName: 'Sudeep Blog',
-    title: 'Sudeep Blog',
-    description:
-      'Articles about technology, web development, health, lifestyle, and interesting ideas.',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: "Sudeep Silwal's Blog",
-      },
-    ],
-  },
+  title: "Sudeep Silwal's Blog",
+  description:
+    'Articles about technology, web development, health, lifestyle, projects, books, reviews, and interesting ideas.',
+  url: '/',
+  type: 'website',
+  images: [
+    {
+      url: '/og-image.png',
+      width: 1734,
+      height: 907,
+      alt: "Sudeep Silwal's Blog",
+    },
+  ],
+},
+
+twitter: {
+  card: 'summary_large_image',
+  title: "Sudeep Silwal's Blog",
+  description:
+    'Articles about technology, web development, health, lifestyle, projects, books, reviews, and interesting ideas.',
+  images: ['/og-image.png'],
+},
 
   twitter: {
     card: 'summary_large_image',
