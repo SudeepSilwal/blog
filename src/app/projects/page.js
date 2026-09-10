@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function ProjectsPage() {
   const featuredProjects = projects.filter((p) => p.featured)
-  const otherProjects = projects.filter((p) => !p.featured)
+  const allProjects = projects
 
   return (
     <main className="min-h-screen px-5 py-16 sm:px-6">
@@ -41,7 +41,7 @@ export default function ProjectsPage() {
             All Projects
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
-            {otherProjects.map((project) => (
+            {allProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>

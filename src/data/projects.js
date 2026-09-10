@@ -1,255 +1,219 @@
 export const projects = [
   {
-    id: 1,
-    title: 'E-Commerce Platform',
-    draft: true,
-    imageAlt:'',
-    slug: 'ecommerce-platform',
-    excerpt: 'A full-featured e-commerce platform with payment integration, inventory management, and real-time order tracking.',
+    id: 5,
+    title: 'RemoveBG',
+    draft: false,
+    imageAlt: 'RemoveBG free online AI background remover',
+    slug: 'removebg',
+    excerpt: 'A free online background remover that uses an image-processing API to remove backgrounds from JPG, PNG, and WebP images and generate transparent PNGs.',
     content: `
       <p>
-        This is a complete e-commerce solution built with modern web technologies.
-        It allows businesses to sell products online with a seamless shopping experience.
+        RemoveBG is a free online background removal tool that makes it easy
+        to remove backgrounds from images directly in a web browser. Users can
+        upload JPG, PNG, or WebP images and receive a transparent PNG with the
+        background removed.
+      </p>
+
+      <p>
+        I built RemoveBG to create a simple and accessible image-processing
+        experience without requiring users to install desktop software or use
+        complicated image-editing tools.
+      </p>
+
+      <h2>Why I Built RemoveBG</h2>
+
+      <p>
+        Removing an image background is useful for product photography,
+        e-commerce images, profile pictures, social media content,
+        presentations, thumbnails, and many other creative projects.
+      </p>
+
+      <p>
+        The goal of RemoveBG is to keep the process simple: upload an image,
+        process it through the background-removal API, and download the
+        resulting transparent PNG.
       </p>
 
       <h2>Key Features</h2>
 
       <ul class="check-list">
-        <li>User authentication and authorization</li>
-        <li>Product catalog with search and filters</li>
-        <li>Shopping cart and checkout process</li>
-        <li>Payment integration with Stripe</li>
-        <li>Order management dashboard</li>
-        <li>Real-time inventory tracking</li>
-        <li>Email notifications for orders</li>
-        <li>Admin panel for product management</li>
+        <li>Free online background removal</li>
+        <li>JPG image support</li>
+        <li>PNG image support</li>
+        <li>WebP image support</li>
+        <li>Transparent PNG output</li>
+        <li>Simple image upload interface</li>
+        <li>Responsive design for desktop and mobile</li>
+        <li>No desktop software installation required</li>
       </ul>
 
-      <h2>Technologies Used</h2>
-
-      <ul class="arrow-list">
-        <li>Next.js 14 for frontend and API routes</li>
-        <li>React for UI components</li>
-        <li>Tailwind CSS for styling</li>
-        <li>PostgreSQL for database</li>
-        <li>Prisma ORM for database management</li>
-        <li>Stripe API for payments</li>
-        <li>Cloudinary for image hosting</li>
-      </ul>
-
-      <blockquote>
-        <p>
-          This project was built to demonstrate a complete e-commerce flow
-          from product browsing to successful checkout.
-        </p>
-      </blockquote>
-
-      <h2>Challenges & Solutions</h2>
+      <h2>How It Works</h2>
 
       <p>
-        One of the biggest challenges was implementing secure payment processing.
-        Using Stripe's API with webhooks ensured that payments were handled
-        securely and reliably.
+        The RemoveBG website provides the frontend interface where users
+        select or upload an image. The image is then sent to a dedicated
+        background-removal API for processing.
       </p>
 
       <p>
-        Another challenge was managing inventory in real-time. Using Prisma
-        with PostgreSQL allowed for atomic updates to prevent overselling.
+        The API processes the image using available background-removal
+        providers. Once processing is complete, the resulting transparent
+        PNG is returned to the frontend so the user can download it.
       </p>
-    `,
-    category: 'Web Development',
-    tags: ['E-commerce', 'Next.js', 'React', 'Stripe', 'PostgreSQL', 'Prisma'],
-    date: '2026-09-06',
-    readingTime: '6 min read',
-    image: '',
-    github: 'https://github.com/SudeepSilwal/ecommerce',
-    demo: '',
-    featured: true,
-  },
-  {
-    id: 2,
-    title: 'Task Management App',
-    draft: true,
-    slug: 'task-management-app',
-    excerpt: 'A collaborative task management application with real-time updates, team workspaces, and progress tracking.',
-    content: `
-      <p>
-        A powerful task management tool designed for teams to collaborate
-        effectively. It helps teams organize work, track progress, and
-        stay aligned on project goals.
-      </p>
-
-      <h2>Key Features</h2>
-
-      <ul class="check-list">
-        <li>Create and assign tasks to team members</li>
-        <li>Real-time updates with WebSockets</li>
-        <li>Team workspaces and permission levels</li>
-        <li>Progress tracking and reporting</li>
-        <li>File attachments and comments</li>
-        <li>Email and in-app notifications</li>
-        <li>Task status and priority levels</li>
-        <li>Due date reminders</li>
-      </ul>
-
-      <h2>Technologies Used</h2>
-
-      <ul class="arrow-list">
-        <li>Next.js 14 for frontend</li>
-        <li>React for UI</li>
-        <li>Tailwind CSS for styling</li>
-        <li>MongoDB for database</li>
-        <li>Socket.io for real-time updates</li>
-        <li>NextAuth.js for authentication</li>
-      </ul>
 
       <div class="article-highlight">
-        Real-time collaboration was the core focus of this project,
-        allowing team members to see changes instantly.
+        Upload an image, remove its background, and download a transparent PNG
+        without installing image-editing software.
       </div>
 
-      <h2>Challenges & Solutions</h2>
+      <h2>Project Architecture</h2>
 
       <p>
-        Implementing real-time updates was challenging. Using Socket.io
-        with MongoDB change streams allowed for instant synchronization
-        across all connected clients.
-      </p>
-    `,
-    category: 'Web Development',
-    tags: ['Task Management', 'Real-time', 'Next.js', 'MongoDB', 'Socket.io'],
-    date: '2026-09-05',
-    readingTime: '5 min read',
-    image: '',
-    github: 'https://github.com/SudeepSilwal/taskapp',
-    demo: '',
-    featured: false,
-  },
-  {
-    id: 3,
-    title: 'Weather Dashboard',
-    draft: true,
-    slug: 'weather-dashboard',
-    excerpt: 'A beautiful weather dashboard with interactive maps, hourly forecasts, and severe weather alerts.',
-    content: `
-      <p>
-        An interactive weather dashboard that provides detailed weather
-        information for any location worldwide.
+        RemoveBG is divided into a lightweight frontend and a separate
+        background-removal API. This separation keeps the frontend simple
+        while allowing the image-processing backend to use multiple
+        providers.
       </p>
 
-      <h2>Key Features</h2>
-
-      <ul class="check-list">
-        <li>Current weather conditions</li>
-        <li>Hourly and daily forecasts</li>
-        <li>Interactive weather maps</li>
-        <li>Severe weather alerts</li>
-        <li>Location search and favorites</li>
-        <li>Responsive design for all devices</li>
-        <li>Temperature, humidity, and wind data</li>
-        <li>Dark mode support</li>
-      </ul>
+      <pre><code>User
+  ↓
+RemoveBG Web App
+  ↓
+Background Removal API
+  ↓
+Background Removal Providers
+  ↓
+Transparent PNG
+  ↓
+Download</code></pre>
 
       <h2>Technologies Used</h2>
 
       <ul class="arrow-list">
-        <li>React for UI</li>
-        <li>Next.js for SSR</li>
-        <li>Tailwind CSS for styling</li>
-        <li>OpenWeather API for data</li>
-        <li>Leaflet.js for interactive maps</li>
-        <li>Chart.js for data visualization</li>
+        <li>HTML for the application structure</li>
+        <li>CSS for responsive styling and the user interface</li>
+        <li>JavaScript for image upload and application logic</li>
+        <li>Cloudflare Workers for frontend deployment</li>
+        <li>Cloudflare Static Assets for serving the website</li>
+        <li>REST API for communication with the image-processing backend</li>
       </ul>
 
-      <blockquote>
-        <p>
-          This dashboard was designed to provide weather information at a glance
-          with beautiful visualizations and an intuitive interface.
-        </p>
-      </blockquote>
-
-      <h2>Challenges & Solutions</h2>
+      <h2>Cloudflare Deployment</h2>
 
       <p>
-        Handling API rate limits was a key challenge. Implementing caching
-        with Next.js ISR (Incremental Static Regeneration) reduced API calls
-        while keeping data fresh.
-      </p>
-    `,
-    category: 'Web Development',
-    tags: ['Weather', 'API', 'React', 'Maps', 'Dashboard'],
-    date: '2026-09-04',
-    readingTime: '4 min read',
-    image: '',
-    github: 'https://github.com/SudeepSilwal/weather-dashboard',
-    demo: 'https://weather-demo.com',
-    featured: false,
-  },
-  {
-    id: 4,
-    title: 'AI Image Generator',
-    draft: true,
-    slug: 'ai-image-generator',
-    excerpt: 'An AI-powered image generator that creates unique images from text descriptions using stable diffusion.',
-    content: `
-      <p>
-        Generate unique images from text descriptions using AI technology.
-        This project leverages stable diffusion to create stunning visuals
-        from simple text prompts.
+        The RemoveBG frontend is deployed using Cloudflare Workers Static
+        Assets. The production files are stored in the project's
+        <code>dist</code> directory and deployed through Cloudflare.
       </p>
 
-      <h2>Key Features</h2>
+      <p>
+        The application is available through the custom domain
+        <strong>removebg.sudeepsilwal.com.np</strong>.
+      </p>
+
+      <h2>Background Removal API</h2>
+
+      <p>
+        The frontend communicates with a dedicated background-removal API
+        rather than exposing third-party provider credentials in the browser.
+        This keeps API credentials on the server and allows the backend to
+        manage different image-processing providers.
+      </p>
+
+      <p>
+        The API can use multiple providers and select an available provider
+        for processing. This architecture improves reliability compared with
+        depending on a single external service.
+      </p>
+
+      <h2>SEO Implementation</h2>
+
+      <p>
+        I also implemented technical SEO so the RemoveBG website can be
+        properly discovered and understood by search engines.
+      </p>
 
       <ul class="check-list">
-        <li>Text-to-image generation</li>
-        <li>Multiple style options (anime, realistic, abstract)</li>
-        <li>Image variations and upscaling</li>
-        <li>Gallery of generated images</li>
-        <li>Download and share images</li>
-        <li>User accounts and history</li>
-        <li>Favorite and save images</li>
-        <li>Community gallery</li>
+        <li>Unique title and meta description</li>
+        <li>Canonical URL</li>
+        <li>Open Graph metadata</li>
+        <li>Twitter/X metadata</li>
+        <li>XML sitemap</li>
+        <li>robots.txt</li>
+        <li>JSON-LD structured data</li>
+        <li>Semantic HTML structure</li>
+        <li>Privacy Policy page</li>
+        <li>Terms of Service page</li>
       </ul>
 
-      <h2>Technologies Used</h2>
+      <h2>Performance</h2>
 
-      <ul class="arrow-list">
-        <li>Next.js 14 for frontend and API</li>
-        <li>React for UI components</li>
-        <li>Tailwind CSS for styling</li>
-        <li>Stable Diffusion API for generation</li>
-        <li>Cloudinary for image storage</li>
-        <li>Prisma with PostgreSQL for data</li>
-      </ul>
+      <p>
+        The frontend is intentionally lightweight and built with standard
+        HTML, CSS, and JavaScript. This avoids the overhead of a large
+        client-side framework for the core image-upload experience.
+      </p>
 
-      <div class="article-highlight">
-        The ability to generate unique images from text opens up endless
-        creative possibilities for artists and designers.
-      </div>
+      <p>
+        Cloudflare's global infrastructure is used to serve the static
+        frontend, providing a fast delivery layer for users.
+      </p>
 
       <h2>Challenges & Solutions</h2>
 
       <p>
-        The biggest challenge was managing API response times. Implementing
-        a queue system with background processing allowed users to continue
-        browsing while images were being generated.
+        One challenge was creating a reliable background-removal workflow
+        while keeping third-party API credentials secure. Separating the
+        frontend from the backend API allows sensitive credentials to remain
+        on the server.
       </p>
+
+      <p>
+        Another challenge was making the application simple enough for users
+        who only need one task: removing an image background. The interface
+        therefore focuses on the upload, processing, preview, and download
+        workflow.
+      </p>
+
+      <h2>Future Improvements</h2>
+
+      <ul class="arrow-list">
+        <li>Drag-and-drop image uploads</li>
+        <li>Batch background removal</li>
+        <li>Additional image formats</li>
+        <li>Background replacement</li>
+        <li>Image compression options</li>
+        <li>Improved processing progress indicators</li>
+        <li>Additional background-removal providers</li>
+        <li>Bot and abuse protection with Cloudflare Turnstile</li>
+      </ul>
 
       <h2>Final Thoughts</h2>
 
       <p>
-        This project demonstrates the power of AI in creative applications.
-        It shows how generative AI can be integrated into web applications
-        to provide users with unique capabilities.
+        RemoveBG is an ongoing project focused on making AI-powered image
+        background removal simple and accessible. It combines a lightweight
+        frontend, a dedicated image-processing API, and Cloudflare
+        infrastructure into a practical web-based tool.
       </p>
     `,
     category: 'AI & Machine Learning',
-    tags: ['AI', 'Image Generation', 'Stable Diffusion', 'Next.js', 'API'],
-    date: '2026-09-03',
+    tags: [
+      'AI',
+      'Background Remover',
+      'Remove Background',
+      'Image Processing',
+      'Image Editing',
+      'Cloudflare Workers',
+      'JavaScript',
+      'REST API',
+      'Web Development',
+    ],
+    date: '2026-09-10',
     readingTime: '7 min read',
-    image: '',
-    github: 'https://github.com/SudeepSilwal/ai-image-generator',
-    demo: '',
+    image: 'https://res.cloudinary.com/dqfqxlysk/image/upload/f_auto,q_auto,w_1200/v1789015157/project-image.png',
+    github: 'https://github.com/SudeepSilwal/bg-remover',
+    demo: 'https://removebg.sudeepsilwal.com.np/',
     featured: true,
   },
 ]

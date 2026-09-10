@@ -390,7 +390,7 @@ export const posts = [
     readingTime: '7 min read',
 
     image:
-      'https://res.cloudinary.com/dqfqxlysk/image/upload/v1788684707/LemonWater.png',
+  'https://res.cloudinary.com/dqfqxlysk/image/upload/f_auto,q_auto,w_1200/v1788684707/LemonWater.png',
 
     youtubeId: 'mSeOdnrg1rI',
 
