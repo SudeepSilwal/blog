@@ -264,7 +264,7 @@ export default function Home() {
                           alt={project.title}
                           fill
                           sizes="(max-width: 768px) 100vw, 50vw"
-                          className="object-cover opacity-40 transition duration-500 group-hover:scale-105 group-hover:opacity-55"
+                          className="object-cover opacity-50 transition duration-500 group-hover:scale-105 group-hover:opacity-70"
                         />
                       )}
 
