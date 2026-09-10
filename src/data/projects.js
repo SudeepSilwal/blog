@@ -6,6 +6,7 @@ export const projects = [
     imageAlt: 'RemoveBG free online AI background remover',
     slug: 'removebg',
     excerpt: 'A free online background remover that uses an image-processing API to remove backgrounds from JPG, PNG, and WebP images and generate transparent PNGs.',
+    description:"A free online background remover that uses an image-processing API to remove backgrounds from JPG, PNG, and WebP images and generate transparent PNGs.",
     content: `
       <p>
         RemoveBG is a free online background removal tool that makes it easy
