@@ -396,4 +396,345 @@ export const posts = [
 
     featured: true,
   },
+  {
+id: 2,
+
+title:
+"The Gentlemen Season 1 & 2 Review: Eddie Horniman's Rise to Power",
+
+imageAlt:
+'The Gentlemen Netflix Series Season 1 and Season 2',
+
+slug:
+'the-gentlemen-season-1-and-2-review',
+
+excerpt:
+"The Gentlemen Season 1 & 2 review: Eddie Horniman's transformation from reluctant duke and former army officer into a confident criminal power player, Freddy's troubled evolution, Geoff Seacombe's loyalty, the family dynamics, and what makes Season 2 different.",
+
+content: `
+
+  <p>
+    Guy Ritchie\'s <em>The Gentlemen</em> is one of those rare crime series that
+    manages to make power look more interesting when it is handled quietly.
+    Season 1 premiered on Netflix on March 7, 2024, introducing Eddie
+    Horniman, a former British Army officer who unexpectedly inherits his
+    family estate and discovers that it is connected to a massive cannabis
+    operation. Season 2 arrived on September 3, 2026, with all eight episodes
+    available to stream on Netflix.
+  </p>
+
+  <div class="article-highlight">
+    <strong>Spoiler warning:</strong> This review discusses major character
+    developments and plot details from both seasons, including Season 2.
+  </div>
+
+  <h2>Eddie Horniman: From Reluctant Duke to Criminal Power Player</h2>
+
+  <p>
+    Eddie Horniman (Theo James) begins <em>The Gentlemen</em> as a man who
+    never expected to inherit his family\'s title or become involved in
+    organized crime. He joined the British Army and expected a very different
+    life. Instead, after his father\'s death, Eddie inherits the Halstead
+    estate and discovers that a cannabis empire is operating underneath it.
+  </p>
+
+  <p>
+    His initial instinct is to protect his family and get out of the criminal
+    business. That becomes increasingly difficult as Eddie realizes that he
+    is actually good at navigating this world. Season 1 gradually changes
+    him from someone reacting to dangerous criminals into someone capable of
+    making his own decisions and using power deliberately.
+  </p>
+
+  <p>
+    By Season 2, the transformation is much more obvious. Eddie is no longer
+    simply the reluctant duke trying to escape the criminal underworld.
+    Netflix describes him as a man who has embraced the possibilities of
+    being both an aristocrat and a criminal. He and Susie Glass expand their
+    operation beyond England, taking their business into Northern Italy and
+    confronting a completely different group of power players.
+  </p>
+
+  <p>
+    This is what makes Eddie\'s character so satisfying to watch. His strength
+    is rarely about being the loudest person in the room. He becomes
+    increasingly dangerous because he stays composed, thinks strategically,
+    and learns when to act. The man who initially wanted nothing to do with
+    crime gradually becomes someone who understands exactly how much power he
+    has.
+  </p>
+
+  <div class="article-highlight">
+    Eddie\'s transformation is the heart of <em>The Gentlemen</em>: he starts
+    by trying to escape the criminal world and eventually realizes that he
+    may be far better suited to controlling it than he ever expected.
+  </div>
+
+  <h2>Freddy Horniman: The Brother Who Keeps Creating Problems</h2>
+
+  <p>
+    Freddy Horniman (Daniel Ings) is almost the opposite of Eddie. As the
+    older brother and apparent heir, Freddy grew up expecting to inherit the
+    Halstead estate. His lifestyle of partying and disastrous business
+    decisions, however, helped explain why their father ultimately left the
+    title to Eddie.
+  </p>
+
+  <p>
+    Season 1 turns Freddy into one of the family\'s biggest liabilities. He
+    gets into serious debt with dangerous people and becomes responsible for
+    a chain of events that puts the entire Horniman family in danger. His
+    infamous chicken-suit sequence is funny on the surface, but underneath
+    it is evidence of just how badly Freddy\'s impulsiveness can spiral out
+    of control.
+  </p>
+
+  <p>
+    What makes Freddy more interesting in Season 2 is that the character
+    does not simply repeat the same mistakes. He is noticeably more serious,
+    and the season forces him to confront the consequences of his previous
+    behavior. He is still Freddy, but there is a greater sense that he
+    understands the responsibility that comes with being part of the
+    Horniman family.
+  </p>
+
+  <p>
+    That makes Freddy\'s relationship with Eddie one of the more interesting
+    parts of the series. Eddie becomes increasingly comfortable with power
+    while Freddy has to figure out what his own place is within a family
+    where his younger brother has become the dominant figure.
+  </p>
+
+  <h2>Geoff Seacombe: The Quietest and Most Loyal Man in the Room</h2>
+
+  <p>
+    Vinnie Jones\' Geoff Seacombe is one of the characters who becomes more
+    impressive the longer the series goes on. As the gamekeeper of Halstead
+    Manor, Geoff initially appears to be a quiet background figure. In
+    reality, he knows the estate intimately and has an extraordinary level
+    of loyalty to the Horniman family.
+  </p>
+
+  <p>
+    Season 1 reveals that Geoff is Charly Horniman\'s biological father,
+    following a past relationship with Lady Sabrina. Season 2 develops that
+    relationship further and gives Geoff considerably more to do.
+  </p>
+
+  <p>
+    Geoff\'s importance becomes especially clear when his family is
+    threatened. Season 2 finally shows the full extent of what this seemingly
+    gentle and reserved gamekeeper is capable of when the people he loves
+    are in danger.
+  </p>
+
+  <ul class="check-list">
+    <li>Extremely loyal to the Horniman family</li>
+    <li>Knows the Halstead estate better than almost anyone</li>
+    <li>Protects the people closest to him without seeking recognition</li>
+    <li>Has a much more dangerous side than his quiet personality suggests</li>
+    <li>Season 2 gives him a substantially larger role</li>
+  </ul>
+
+  <p>
+    Geoff represents one of the show\'s strongest ideas about loyalty:
+    sometimes the most dependable person is the one who says the least.
+    His calm personality makes his moments of violence and protection hit
+    even harder.
+  </p>
+
+  <h2>Eddie and Susie: Partners, Rivals, and Power Players</h2>
+
+  <p>
+    Eddie\'s transformation cannot really be separated from his relationship
+    with Susie Glass (Kaya Scodelario). In Season 1, Susie introduces Eddie
+    to the criminal operation beneath his estate, and the two gradually
+    discover that they make an unusually effective team.
+  </p>
+
+  <p>
+    Season 2 changes that balance. Their criminal operation has expanded
+    beyond England, and Eddie is becoming more ambitious while Susie begins
+    questioning whether she wants to remain so closely tied to her father\'s
+    empire.
+  </p>
+
+  <p>
+    That creates an interesting tension between them. Eddie is becoming more
+    comfortable with power, while Susie is beginning to consider what her own
+    future could look like outside Bobby Glass\'s shadow.
+  </p>
+
+  <p>
+    Their partnership works because neither character is simply a sidekick.
+    Both are capable, ambitious, and increasingly willing to make decisions
+    that could change the balance of power between them.
+  </p>
+
+  <h2>Family, Loyalty, and the Price of Power</h2>
+
+  <p>
+    Beneath the guns, drug deals, aristocratic estates, and Guy Ritchie-style
+    dialogue, <em>The Gentlemen</em> is fundamentally interested in loyalty.
+    Eddie has to decide how far he will go to protect his family. Freddy has
+    to confront the consequences of his choices. Geoff remains devoted to
+    the Hornimans, while Susie has to balance loyalty to her family with her
+    own ambitions.
+  </p>
+
+  <p>
+    Season 2 expands this idea by making the criminal operation much larger.
+    Eddie and Susie move into Northern Italy and encounter Marco Moretti
+    (Sergio Castellitto), a powerful Italian Mafia boss. They also encounter
+    new aristocratic and criminal figures, including Lord Hawthorne and
+    Bella.
+  </p>
+
+  <p>
+    The result is a bigger world than Season 1, but the central question
+    remains the same: who can you trust when everyone around you has
+    something to gain?
+  </p>
+
+  <h2>The Masculinity of The Gentlemen</h2>
+
+  <p>
+    One of the reasons Eddie\'s character arc works so well for me is the
+    show\'s approach to masculinity. It rarely presents strength as simply
+    being louder, angrier, or more violent than everyone else.
+  </p>
+
+  <p>
+    Eddie becomes more formidable as he becomes more controlled. Geoff is
+    another example: his strength comes from patience, experience, and
+    loyalty rather than the need to constantly prove himself. Even Freddy\'s
+    storyline is ultimately about learning to take responsibility for his
+    actions.
+  </p>
+
+  <p>
+    It gives the series an old-fashioned idea of strength: competence,
+    composure, responsibility, and the willingness to protect the people
+    who matter to you. The show obviously exaggerates these qualities for
+    entertainment, but that is part of what makes its characters memorable.
+  </p>
+
+  <h2>What Makes Season 2 Different From Season 1?</h2>
+
+  <p>
+    Season 1 is largely about Eddie discovering the criminal world and
+    figuring out how to survive inside it. The story is more focused on the
+    Halstead estate, the Glass family, and Eddie\'s attempt to get his family
+    out of trouble.
+  </p>
+
+  <p>
+    Season 2 starts from a very different position. Eddie already knows what
+    he is capable of, and he wants more. The criminal operation expands into
+    Northern Italy, bringing the characters into conflict with the Mafia and
+    introducing a larger international element to the story.
+  </p>
+
+  <p>
+    That change gives Season 2 a different energy. The question is no longer
+    simply whether Eddie can survive the criminal world. It becomes a
+    question of how much power he wants — and how much of himself he is
+    willing to sacrifice to obtain it.
+  </p>
+
+  <h2>Where to Watch The Gentlemen Seasons 1 and 2</h2>
+
+  <p>
+    Both seasons of <em>The Gentlemen</em> are currently available to stream
+    on Netflix.
+  </p>
+
+  <ul class="arrow-list">
+    <li>Season 1 — 8 episodes, released March 7, 2024</li>
+    <li>Season 2 — 8 episodes, released September 3, 2026</li>
+    <li>Streaming platform — Netflix</li>
+    <li>Season 3 — officially confirmed by Netflix</li>
+    <li>
+      Watch on:
+      <a
+        href="https://www.netflix.com/title/81474633"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Netflix
+      </a>
+    </li>
+  </ul>
+
+  <h2>Final Thoughts</h2>
+
+  <p>
+    <em>The Gentlemen</em> Season 1 is the story of a reluctant aristocrat
+    getting dragged into a criminal empire he never wanted. Season 2 is the
+    story of what happens once that same man realizes he may actually enjoy
+    having power.
+  </p>
+
+  <p>
+    Eddie\'s transformation is the biggest reason to keep watching, but he
+    is far from the only character worth following. Freddy becomes more
+    complicated, Geoff finally gets the larger role he deserves, Susie\'s
+    ambitions evolve, and the Horniman family finds itself operating in a
+    much larger and more dangerous criminal world.
+  </p>
+
+  <p>
+    For me, the best part of <em>The Gentlemen</em> is that its characters
+    are not powerful simply because they can intimidate people. The most
+    interesting characters understand people, control themselves, and know
+    when to act.
+  </p>
+
+  <p>
+    Season 2 ultimately makes Eddie a much more dangerous man than the
+    hesitant duke we met in Season 1. And with Netflix already confirming
+    Season 3, his story is clearly not finished yet.
+  </p>
+
+  <p>
+    If you enjoyed Season 1, Season 2 is worth watching for Eddie\'s
+    transformation alone. If you have already finished both seasons, the
+    bigger question is where Guy Ritchie takes this increasingly ambitious
+    criminal empire next.
+  </p>
+`,
+
+category: 'Entertainment',
+
+tags: [
+'The Gentlemen',
+'The Gentlemen Season 2',
+'The Gentlemen Season 1',
+'Netflix',
+'Guy Ritchie',
+'Theo James',
+'Kaya Scodelario',
+'Vinnie Jones',
+'Daniel Ings',
+'TV Review',
+'Crime Drama',
+'Netflix Series',
+'Eddie Horniman',
+'Geoff Seacombe',
+'Freddy Horniman',
+],
+
+date: '2026-09-16T00:00:00+05:45',
+
+modifiedDate: '2026-09-16T00:00:00+05:45',
+
+readingTime: '9 min read',
+
+image:
+'https://res.cloudinary.com/dqfqxlysk/image/upload/f_auto,q_auto,w_1200/v1789497358/The_Gentlemen.png',
+
+youtubeId: 'wyEOwHrpZH4',
+
+featured: true,
+}
 ]
