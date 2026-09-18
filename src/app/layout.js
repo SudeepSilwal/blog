@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from 'next/font/google'
+import Script from 'next/script'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import './globals.css'
@@ -95,7 +96,7 @@ export default function RootLayout({ children }) {
   }
 
   return (
-   <html lang="en" data-scroll-behavior="smooth">
+    <html lang="en" data-scroll-behavior="smooth">
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background text-foreground`}
       >
@@ -113,6 +114,22 @@ export default function RootLayout({ children }) {
         </main>
 
         <Footer />
+
+        {/* Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-EG4E0Z7YVF"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-EG4E0Z7YVF');
+          `}
+        </Script>
       </body>
     </html>
   )
