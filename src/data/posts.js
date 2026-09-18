@@ -1250,6 +1250,5 @@ featured: true,
 
   featured:
     true,
-},
-
+}
 ]
