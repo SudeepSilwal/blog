@@ -34,7 +34,9 @@ export default function PostsPage() {
         </section>
 
         <section className="mt-14 grid gap-6 border-t border-border pt-10 md:grid-cols-2">
-          {posts.map((post) => (
+          {[...posts]
+  .sort((a, b) => new Date(b.date) - new Date(a.date))
+  .map((post) => (
             <Link
               key={post.id}
               href={`/posts/${post.slug}`}

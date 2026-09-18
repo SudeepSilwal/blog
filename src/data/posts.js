@@ -736,5 +736,520 @@ image:
 youtubeId: 'wyEOwHrpZH4',
 
 featured: true,
-}
+},
+{
+  id: 3,
+
+  title:
+    'Elephants in the Fog: A Decent Film That Left Me Thinking',
+
+  imageAlt:
+    'Elephants in the Fog',
+
+  slug:
+    'elephants-in-the-fog-review',
+
+  excerpt:
+    'I went into Elephants in the Fog expecting something extraordinary after hearing about its Cannes reception. What I found was a thoughtful and visually striking Nepali film that I appreciated, even though its ending left me more confused than satisfied.',
+
+  content: `
+  <p>
+    I probably would not have watched <em>Elephants in the Fog</em> if my
+    friend had not called me that morning and asked if I was going to watch
+    it with the others.
+  </p>
+
+  <p>
+    I had not even watched the trailer. I had only seen some discussion about
+    the movie on Instagram reels, YouTube Shorts, and elsewhere. Then I heard
+    that the film had received a long standing ovation at Cannes and had won
+    the Jury Prize in the Un Certain Regard section. Naturally, that raised
+    my expectations.
+  </p>
+
+  <p>
+    I am someone who watches a lot of movies. I have probably watched more
+    than 200 films by now, and cinema, filmmaking, and television are some of
+    my favorite ways to spend my time. So when a Nepali film receives this
+    kind of international appreciation, especially at Cannes, I naturally
+    become curious about what makes it so special.
+  </p>
+
+  <p>
+    But I will be honest: when I finally sat in the theatre and understood
+    what kind of story I was about to watch, I was not completely sure what
+    to expect. I had never really gone into a Kinnar-centered film before,
+    and part of me wondered what this movie would offer that would make me
+    sit through the entire film.
+  </p>
+
+  <p>
+    By the time the credits rolled, my reaction was somewhere between
+    appreciation and confusion.
+  </p>
+
+  <div class="article-highlight">
+    <p>
+      <strong>My rating: 7.5/10</strong>
+    </p>
+    <p>
+      Not a masterpiece for me, but definitely a film worth thinking about
+      after leaving the theatre.
+    </p>
+  </div>
+
+  <h2>The Story</h2>
+
+  <p>
+    <em>Elephants in the Fog</em>, also known by its Nepali title
+    <em>Tiniharu</em>, takes place in a village in southern Nepal, near a
+    forest inhabited by wild elephants. At the center of the story is Pirati,
+    the matriarch of a Kinnar community.
+  </p>
+
+  <p>
+    Pirati has an important position within her community. The Kinnar women
+    live together as a chosen family and are also respected by villagers for
+    performing blessings and rituals during occasions such as marriages and
+    pregnancies.
+  </p>
+
+  <p>
+    At the same time, their acceptance is complicated. They can be respected
+    in one situation and treated very differently when they challenge the
+    expectations placed upon them.
+  </p>
+
+  <p>
+    Pirati herself is caught between those expectations and her own desires.
+    She is expected to uphold the rules of her community, including its
+    restrictions on relationships, while she has developed a relationship
+    with Master, a musician from the village.
+  </p>
+
+  <p>
+    Things become more complicated when Pirati's adopted daughter, Apsara,
+    begins challenging those same expectations. Apsara wants her own life
+    and has a relationship of her own, creating conflict between mother and
+    daughter.
+  </p>
+
+  <p>
+    Their argument eventually becomes physical. Pirati pushes Apsara, and
+    Apsara leaves the house.
+  </p>
+
+  <p>
+    At first, Pirati does not seem immediately overwhelmed by her daughter's
+    disappearance. But when Apsara does not return, concern slowly turns
+    into desperation. Pirati begins searching for her.
+  </p>
+
+  <h2>When the Community Turns Against Pirati</h2>
+
+  <p>
+    The search leads Pirati toward MJ, a rickshaw driver who had been in
+    contact with Apsara. When Pirati confronts him and involves the police,
+    the situation becomes even more difficult for her.
+  </p>
+
+  <p>
+    Instead of receiving the support she might expect, Pirati finds herself
+    increasingly isolated. The villagers who previously accepted her presence
+    begin turning against her.
+  </p>
+
+  <p>
+    This was one of the parts of the film that stood out to me.
+  </p>
+
+  <p>
+    Pirati had been useful to the community. She gave blessings, participated
+    in ceremonies, and occupied a respected position. But when she became
+    inconvenient, that respect suddenly became conditional.
+  </p>
+
+  <p>
+    The film seems interested in that contradiction: how a community can
+    simultaneously revere, fear, depend upon, and exclude the same people.
+  </p>
+
+  <p>
+    The villagers' attitude toward Pirati changes dramatically once she begins
+    challenging the boundaries they are comfortable with. Her status gives her
+    a certain kind of respect, but it does not necessarily give her genuine
+    acceptance.
+  </p>
+
+  <h2>Spoilers Ahead: The Part That Really Changed Pirati</h2>
+
+  <p>
+    <strong>Spoiler warning:</strong> From this point onward, I am discussing
+    the major events and ending of the movie.
+  </p>
+
+  <p>
+    During her search, Pirati discovers that a body has been found. She
+    suspects that it could be connected to Apsara and goes to see the body,
+    but she is prevented from entering because she is not considered a blood
+    relative.
+  </p>
+
+  <p>
+    That moment leads her somewhere even more important: Apsara's biological
+    family.
+  </p>
+
+  <p>
+    Pirati goes to Apsara's original home and asks her biological mother to
+    help her confirm whether the person she is searching for is actually
+    Apsara.
+  </p>
+
+  <p>
+    And then comes one of the most important moments in the film.
+  </p>
+
+  <p>
+    Pirati sees Apsara alive, dressed as a man, at her biological home.
+    Whatever questions I had about the story at that point became less
+    important than what the scene represented.
+  </p>
+
+  <p>
+    Pirati, who had previously been enforcing the rules of her community on
+    Apsara, now desperately wants her daughter back. She apologizes and
+    pleads for help, but she is separated from Apsara by her biological
+    family.
+  </p>
+
+  <p>
+    This is where Pirati's character changes for me.
+  </p>
+
+  <p>
+    Earlier in the film, she seemed deeply tied to the rules of her
+    community. She wanted to be respected, wanted to maintain her position,
+    and even wanted to leave with Master. But after Apsara disappears, the
+    priorities change.
+  </p>
+
+  <p>
+    She stops behaving like someone simply trying to preserve her position
+    and starts behaving like a mother desperately trying to find her child.
+  </p>
+
+  <h2>Can Someone Become a Mother Without Being a Biological Mother?</h2>
+
+  <p>
+    This may actually be one of the ideas I found most interesting in the
+    film.
+  </p>
+
+  <p>
+    Pirati is not Apsara's biological mother. Their relationship exists
+    through the chosen family that the Kinnar community has created.
+    Yet when Apsara disappears, Pirati's attachment to her becomes stronger
+    than the rules she had previously defended.
+  </p>
+
+  <p>
+    The movie seems to suggest that motherhood is not necessarily defined
+    only by biology. It can also be created through responsibility, care,
+    attachment, and the bond between two people.
+  </p>
+
+  <p>
+    I would not say the movie gives a simple answer to this idea, but
+    Pirati's transformation certainly made me think about it.
+  </p>
+
+  <h2>The Villagers and Their Changing Attitude</h2>
+
+  <p>
+    Another part I found interesting was the way the villagers treated the
+    Kinnar community.
+  </p>
+
+  <p>
+    At the beginning, Pirati and the other Kinnar women are part of village
+    life. They are invited to ceremonies and their blessings are considered
+    meaningful. There is a certain reverence surrounding them.
+  </p>
+
+  <p>
+    But when Pirati becomes a problem, that attitude changes.
+  </p>
+
+  <p>
+    The same people who could show respect toward the Kinnar community during
+    ceremonies can turn hostile when the community no longer fits the role
+    they expect it to play.
+  </p>
+
+  <p>
+    The film seems to use this contrast to question whether the acceptance
+    shown by society is genuine or simply conditional.
+  </p>
+
+  <p>
+    In that sense, the Kinnar community is not simply shown as being outside
+    society. They are already part of the village. They participate in its
+    traditions and relationships. Yet there is still a line that the wider
+    community does not seem willing to let them cross.
+  </p>
+
+  <h2>And Then There Are the Elephants</h2>
+
+  <p>
+    The elephants are not just there to create danger or atmosphere.
+  </p>
+
+  <p>
+    Throughout the movie, the villagers fear the elephants living around the
+    forest. They organize patrols and take precautions because the animals
+    can enter the village and cause serious damage.
+  </p>
+
+  <p>
+    What I found interesting is the parallel the film creates between the
+    elephants and the Kinnar community. Both exist on the edge of the
+    village. Both are treated as something different. And both seem to
+    occupy a strange space between fear, respect, and distance.
+  </p>
+
+  <p>
+    The title itself, <em>Elephants in the Fog</em>, feels appropriate because
+    so much of the film operates in uncertainty. We do not always know
+    exactly what is happening, what is real, or what a particular image is
+    supposed to represent.
+  </p>
+
+  <h2>The Ending: I Am Still Not Completely Sure</h2>
+
+  <p>
+    This is probably the biggest weakness for me, although it might also be
+    intentional.
+  </p>
+
+  <p>
+    After Pirati returns from Apsara's biological home, the house she had
+    been living in is burning. She searches for the other members of her
+    community, and eventually we reach the strange and almost dreamlike
+    final sequence.
+  </p>
+
+  <p>
+    Pirati is in the forest, clapping. Then other clapping seems to emerge
+    around her. The Kinnar women appear, and eventually the elephants enter
+    the scene.
+  </p>
+
+  <p>
+    I understood the emotional meaning of the scene more than the literal
+    meaning.
+  </p>
+
+  <p>
+    To me, it felt as though Pirati was no longer simply standing as one
+    individual woman. She was carrying the grief, anger, and suffering of
+    the people around her. The elephants appearing alongside the community
+    made the ending feel almost mythological, as if the film had moved from
+    a grounded mystery into something symbolic.
+  </p>
+
+  <p>
+    But I would be lying if I said I completely understood what the director
+    wanted me to take from it.
+  </p>
+
+  <p>
+    Maybe the elephants represent the power of something that society cannot
+    completely control. Maybe they connect the Kinnar community with the
+    forest and the idea of being pushed to the margins. Or maybe the final
+    sequence is deliberately open enough for every viewer to interpret it
+    differently.
+  </p>
+
+  <p>
+    I actually think the final sequence works better as an image than as a
+    straightforward conclusion. It is memorable, but I personally wanted a
+    little more clarity before the credits rolled.
+  </p>
+
+  <h2>The Interval Felt Slightly Odd</h2>
+
+  <p>
+    One smaller complaint I had was the interval.
+  </p>
+
+  <p>
+    I did not feel that the particular point where the movie stopped was
+    especially natural. It felt more like a practical break for the
+    audience than a break that came at a strong dramatic point.
+  </p>
+
+  <p>
+    Moving it slightly earlier or later might have made the first and second
+    halves feel more naturally divided.
+  </p>
+
+  <p>
+    This is obviously a small criticism, but when watching a film in a
+    theatre, pacing matters beyond the story itself.
+  </p>
+
+  <h2>What I Thought of Abinash Bikram Shah</h2>
+
+  <p>
+    After watching the movie, I became curious about the director because
+    I realized this was not simply a filmmaker appearing out of nowhere.
+  </p>
+
+  <p>
+    Abinash Bikram Shah is a Nepali writer and director who has already built
+    an international festival career. Before <em>Elephants in the Fog</em>,
+    he directed the short films <em>I Am Happy</em>, <em>Tattini: The Moon Is
+    Bright Tonight</em>, and <em>Lori</em>.
+  </p>
+
+  <p>
+    <em>Lori</em> was selected for the Cannes short-film competition in 2022
+    and received a Special Jury Mention.
+  </p>
+
+  <p>
+    Shah has also worked as a writer on several notable Nepali films,
+    including <em>Highway</em>, <em>Kalo Pothi: The Black Hen</em>, and
+    <em>Shambhala</em>.
+  </p>
+
+  <p>
+    So after learning more about his previous work, the Cannes recognition
+    for <em>Elephants in the Fog</em> made more sense to me. This is a
+    filmmaker who has been working toward this kind of cinema for years.
+  </p>
+
+  <h2>So, Was It Worth Watching?</h2>
+
+  <p>
+    For me, yes.
+  </p>
+
+  <p>
+    But not because I came out thinking I had just watched the greatest Nepali
+    movie ever made.
+  </p>
+
+  <p>
+    My expectations were probably too high before the movie even started.
+    Hearing about Cannes, the standing ovation, and the Jury Prize made me
+    expect something extraordinary. And because I watch a lot of movies,
+    especially Hollywood and Bollywood films, I probably approached it with
+    a different set of expectations than someone who primarily watches
+    festival cinema.
+  </p>
+
+  <p>
+    <em>Elephants in the Fog</em> is slower, quieter, and much more
+    metaphorical than the kind of mainstream movie I usually reach for.
+    Some of its ideas worked for me immediately. Others went over my head.
+  </p>
+
+  <p>
+    The story of Pirati and Apsara stayed with me, particularly the change
+    in Pirati from someone trying to enforce the rules of her community to
+    someone willing to fight against almost everything around her to find
+    her daughter.
+  </p>
+
+  <p>
+    I also liked the way the film made me question the difference between
+    being respected and actually being accepted.
+  </p>
+
+  <p>
+    At the same time, I found parts of the movie and especially the final
+    sequence difficult to understand. Maybe that ambiguity is exactly what
+    the filmmakers intended. Maybe I simply missed some of the symbolism.
+    Either way, I left the theatre thinking about the movie rather than
+    completely understanding it.
+  </p>
+
+  <h2>Final Thoughts</h2>
+
+  <p>
+    I would give <em>Elephants in the Fog</em> around <strong>7.5/10</strong>.
+  </p>
+
+  <p>
+    The first point of that score is simply that it is a well-made and
+    ambitious Nepali film with a story that is clearly trying to say
+    something beyond its immediate plot.
+  </p>
+
+  <p>
+    The second is that my expectations were probably too high before I even
+    entered the theatre. The Cannes reception made me expect a masterpiece,
+    and the movie did not quite reach that level for me.
+  </p>
+
+  <p>
+    The third is the ending. I liked the imagery, the atmosphere, and the
+    symbolism, but I did not completely understand what I was supposed to
+    take from the final sequence.
+  </p>
+
+  <p>
+    Still, I think there is something valuable about a movie that makes you
+    leave the theatre and continue thinking about it.
+  </p>
+
+  <p>
+    <em>Elephants in the Fog</em> did exactly that for me.
+  </p>
+
+  <p>
+    I may not have understood everything, and I may not be the biggest
+    appreciator of this particular style of cinema, but I can still say that
+    it was a pretty decent film—and an interesting one to experience in a
+    Nepali theatre.
+  </p>
+`,
+
+  category:
+    'Movies & Reviews',
+
+  tags: [
+    'Elephants in the Fog',
+    'Tiniharu',
+    'Nepali Cinema',
+    'Movie Review',
+    'Abinash Bikram Shah',
+    'Cannes',
+    'Nepali Movies',
+    'Film Review',
+    'Pirati',
+    'Kinnar'
+  ],
+
+  date:
+    '2026-09-18T00:00:00+05:45',
+
+  modifiedDate:
+    '2026-09-18T00:00:00+05:45',
+
+  readingTime:
+    '8 min read',
+
+  image:
+    'https://res.cloudinary.com/dqfqxlysk/image/upload/v1789753104/Tiniharu.webp',
+
+  youtubeId:
+    '9tBBtuLlzkY',
+
+  featured:
+    true,
+},
+
 ]

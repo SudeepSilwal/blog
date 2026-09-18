@@ -39,8 +39,12 @@ export const metadata = {
 }
 
 export default function Home() {
-  const featuredPosts = posts.filter((post) => post.featured)
-  const allPosts = posts
+  const featuredPosts = [...posts]
+  .filter((post) => post.featured)
+  .sort((a, b) => new Date(b.date) - new Date(a.date))
+
+const allPosts = [...posts]
+  .sort((a, b) => new Date(b.date) - new Date(a.date))
 
   const featuredProjects = projects.filter(
     (project) => project.featured
