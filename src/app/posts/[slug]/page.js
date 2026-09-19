@@ -11,37 +11,47 @@ export async function generateMetadata({ params }) {
   if (!post) {
     return {
       title: 'Post Not Found',
+      robots: {
+        index: false,
+      },
     }
   }
 
+  const seoTitle =
+    post.seoTitle || post.title
+
+  const seoDescription =
+    post.seoDescription || post.excerpt
+
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: seoTitle,
+    description: seoDescription,
 
     alternates: {
       canonical: `/posts/${post.slug}`,
     },
 
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
+      title: seoTitle,
+      description: seoDescription,
       url: `/posts/${post.slug}`,
       siteName: 'Sudeep Blog',
       type: 'article',
       publishedTime: post.date,
+      modifiedTime: post.modifiedDate || post.date,
 
       images: [
         {
           url: post.image,
-          alt: post.title,
+          alt: post.imageAlt || post.title,
         },
       ],
     },
 
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
-      description: post.excerpt,
+      title: seoTitle,
+      description: seoDescription,
       images: [post.image],
     },
   }

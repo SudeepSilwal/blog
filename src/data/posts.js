@@ -10,6 +10,9 @@ export const posts = [
 
     excerpt:
       'What really happens if you drink lemon water every day for 30 days? Learn about hydration, weight loss myths, vitamin C, honey, sugar, garlic, mint, possible side effects, and what you can realistically expect.',
+      seoTitle: 'Lemon Water Daily for 30 Days: What Happens?',
+seoDescription:
+  'Discover what may happen when you drink lemon water every day for 30 days, including potential benefits, drawbacks, hydration, and nutrition.',
 
     content: `
   <p>
