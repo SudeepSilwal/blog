@@ -8,7 +8,7 @@ export default function NotFound() {
           404
         </p>
 
-        <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
+        <h1 className="mt-4 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
           Post not found
         </h1>
 
@@ -16,17 +16,17 @@ export default function NotFound() {
           The article you’re looking for doesn’t exist or may have been moved.
         </p>
 
-        <div className="mt-8 flex justify-center gap-4">
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Link
-            href="/posts"
-            className="rounded-lg bg-foreground px-5 py-3 text-sm font-medium text-background transition-opacity hover:opacity-80"
-          >
-            Browse posts
-          </Link>
+  href="/posts"
+  className="rounded-lg bg-black px-5 py-3 text-sm font-medium !text-white transition-colors hover:bg-gray-800 dark:bg-white dark:!text-black dark:hover:bg-gray-200"
+>
+  Browse posts
+</Link>
 
           <Link
             href="/"
-            className="rounded-lg border border-border px-5 py-3 text-sm font-medium transition-colors hover:bg-muted"
+            className="rounded-lg border border-gray-300 px-5 py-3 text-sm font-medium text-black transition-colors hover:bg-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800"
           >
             Go home
           </Link>
