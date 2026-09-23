@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { ThemeToggle } from './theme-toggle'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -17,6 +18,7 @@ export default function Header() {
   const navLinks = [
     { href: '/posts', label: 'Posts' },
     { href: '/projects', label: 'Projects' },
+    { href: '/contact', label: 'Contact' },
   ]
 
   return (
@@ -25,10 +27,7 @@ export default function Header() {
         className="container mx-auto max-w-3xl px-5"
         aria-label="Main navigation"
       >
-        {/* Top Bar */}
         <div className="flex items-center justify-between">
-
-          {/* Logo */}
           <Link
             href="/"
             className="font-serif text-2xl font-bold"
@@ -37,7 +36,6 @@ export default function Header() {
             Sudeep.
           </Link>
 
-          {/* Desktop Navigation */}
           <ul className="hidden items-center gap-8 text-sm font-light text-muted-foreground sm:flex">
             {navLinks.map((link) => (
               <li
@@ -61,10 +59,7 @@ export default function Header() {
             </li>
           </ul>
 
-          {/* Right Side */}
           <div className="flex items-center gap-2">
-
-            {/* Mobile Menu Button */}
             <button
               type="button"
               onClick={() => setMenuOpen(!menuOpen)}
@@ -79,10 +74,11 @@ export default function Header() {
                 <span aria-hidden="true" className="text-xl">☰</span>
               )}
             </button>
+
+            <ThemeToggle />
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {menuOpen && (
           <div id="mobile-nav" className="mt-4 border-t pt-4 sm:hidden">
             <ul className="flex flex-col gap-4 text-sm font-light text-muted-foreground">
